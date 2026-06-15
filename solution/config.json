@@ -1,7 +1,9 @@
 {
   "provider": "openai",
-  "model": "gpt-5.4-nano",
+  "model": "gpt-5.4-mini",
   "model_price_tier": "standard",
+  "prompt_file": "solution/prompt.txt",
+  "examples_file": "solution/examples.json",
   "max_steps": 6,
   "loop_guard": true,
   "temperature": 0.2,

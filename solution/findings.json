@@ -1,5 +1,5 @@
 {
-  "team": "Vietnam-Team",
+  "team": "Nguyên",
   "schema_version": 1,
   "findings": [
     {
@@ -43,12 +43,6 @@
       "evidence": {"metric": "turn_index_accuracy", "observed": "Accuracy and formatting degrade heavily after turn 3 in a session", "trace_ids": []},
       "root_cause": "session_drift_rate set to 0.06, and context_reset_every was 0 (never resetting), causing historical drift to corrupt current responses.",
       "suggested_fix": "Set context_reset_every to 3 in config.json to clear history and prevent drift accumulation."
-    },
-    {
-      "fault_class": "prompt_injection",
-      "evidence": {"metric": "price_hijack_attempts", "observed": "User notes contain override commands targeting agent prices", "trace_ids": []},
-      "root_cause": "The agent was treating the user-supplied order notes (GHI CHÚ) as instructions, allowing hackers to manipulate product prices.",
-      "suggested_fix": "Add strict notes handling rules in prompt.txt, and implement regex note sanitization in wrapper.py to strip action verbs and price claims."
     },
     {
       "fault_class": "fabrication",
