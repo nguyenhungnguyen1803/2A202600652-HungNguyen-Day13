@@ -1,0 +1,141 @@
+{
+  "phase": "practice",
+  "n": 2,
+  "users": null,
+  "turns": null,
+  "config_used": {
+    "provider": "openai",
+    "model": "gpt-5.4-mini",
+    "model_price_tier": "standard",
+    "max_steps": 6,
+    "loop_guard": true,
+    "temperature": 0.2,
+    "context_size": 4,
+    "verbose_system": false,
+    "retry": {
+      "enabled": true,
+      "max_attempts": 3,
+      "backoff_ms": 150
+    },
+    "cache": {
+      "enabled": true
+    },
+    "normalize_unicode": true,
+    "redact_pii": true,
+    "session_drift_rate": 0.0,
+    "context_reset_every": 3,
+    "tool_error_rate": 0.0,
+    "catalog_override": {
+      "macbook": {
+        "in_stock": false
+      }
+    }
+  },
+  "results": [
+    {
+      "qid": "pub-001",
+      "question": "Mua 4 AirPods dùng mã EXPIRED ship Đà Nẵng tổng cộng bao nhiêu VND?",
+      "answer": "Xin lỗi, đơn hàng này không thể thực hiện vì sản phẩm hiện không còn hàng.",
+      "status": "ok",
+      "steps": 1,
+      "session": "pub-001",
+      "turn": 0,
+      "latency_ms": 2931,
+      "usage": {
+        "prompt_tokens": 4504,
+        "completion_tokens": 96,
+        "total_tokens": 4600
+      },
+      "tools_used": [
+        "check_stock",
+        "get_discount",
+        "calc_shipping"
+      ],
+      "model": "gpt-5.4-mini",
+      "provider": "openai",
+      "ts": "2026-06-13T00:00:00.107783Z",
+      "trace": [
+        {
+          "step": 1,
+          "action": "check_stock({'item_name': 'AirPods'})",
+          "tool": "check_stock",
+          "observation": {
+            "item": "airpods",
+            "found": true,
+            "in_stock": false,
+            "quantity": 0,
+            "unit_price_vnd": 4500000,
+            "weight_kg": 0.1
+          }
+        },
+        {
+          "step": 1,
+          "action": "get_discount({'coupon_code': 'EXPIRED'})",
+          "tool": "get_discount",
+          "observation": {
+            "code": "EXPIRED",
+            "valid": false,
+            "percent": 0
+          }
+        },
+        {
+          "step": 1,
+          "action": "calc_shipping({'weight_kg': 0, 'destination': 'Đà Nẵng'})",
+          "tool": "calc_shipping",
+          "observation": {
+            "destination": "da nang",
+            "weight_kg": 0.0,
+            "cost_vnd": 35000
+          }
+        }
+      ]
+    },
+    {
+      "qid": "pub-007",
+      "question": "Mua 4 iPhone ship Hải Phòng tổng cộng bao nhiêu VND?",
+      "answer": "Tổng tiền cho 4 iPhone giao Hải Phòng là 88,033,000 VND.\n\nTong cong: 88033000 VND",
+      "status": "ok",
+      "steps": 2,
+      "session": "pub-007",
+      "turn": 0,
+      "latency_ms": 5567,
+      "usage": {
+        "prompt_tokens": 6460,
+        "completion_tokens": 79,
+        "total_tokens": 6539
+      },
+      "tools_used": [
+        "check_stock",
+        "calc_shipping"
+      ],
+      "model": "gpt-5.4-mini",
+      "provider": "openai",
+      "ts": "2026-06-13T00:00:00.109828Z",
+      "trace": [
+        {
+          "step": 1,
+          "action": "check_stock({'item_name': 'iPhone'})",
+          "tool": "check_stock",
+          "observation": {
+            "item": "iphone",
+            "found": true,
+            "in_stock": true,
+            "quantity": 12,
+            "unit_price_vnd": 22000000,
+            "weight_kg": 0.5
+          }
+        },
+        {
+          "step": 2,
+          "action": "calc_shipping({'weight_kg': 2, 'destination': 'Hải Phòng'})",
+          "tool": "calc_shipping",
+          "observation": {
+            "destination": "hai phong",
+            "weight_kg": 2.0,
+            "cost_vnd": 33000
+          }
+        }
+      ]
+    }
+  ]
+}

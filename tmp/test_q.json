@@ -1,0 +1,26 @@
+[
+  {
+    "qid": "pub-001",
+    "question": "Mua 4 AirPods dùng mã EXPIRED ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 4,
+      "coupon": "EXPIRED",
+      "dest": "da nang"
+    },
+    "session": "pub-001",
+    "turn": 0
+  },
+  {
+    "qid": "pub-007",
+    "question": "Mua 4 iPhone ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": null,
+      "dest": "hai phong"
+    },
+    "session": "pub-007",
+    "turn": 0
+  }
+]

@@ -1,0 +1,1048 @@
+Disassembly of _p95:
+ 19           0 RESUME                   0
+
+ 20           2 LOAD_FAST                0 (values)
+              4 POP_JUMP_IF_TRUE         1 (to 8)
+
+ 21           6 RETURN_CONST             1 (0.0)
+
+ 22     >>    8 LOAD_GLOBAL              1 (NULL + sorted)
+             18 LOAD_FAST                0 (values)
+             20 CALL                     1
+             28 STORE_FAST               1 (s)
+
+ 23          30 LOAD_FAST                1 (s)
+             32 LOAD_GLOBAL              3 (NULL + min)
+             42 LOAD_GLOBAL              5 (NULL + len)
+             52 LOAD_FAST                1 (s)
+             54 CALL                     1
+             62 LOAD_CONST               2 (1)
+             64 BINARY_OP               10 (-)
+             68 LOAD_GLOBAL              7 (NULL + int)
+             78 LOAD_GLOBAL              9 (NULL + round)
+             88 LOAD_CONST               3 (0.95)
+             90 LOAD_GLOBAL              5 (NULL + len)
+            100 LOAD_FAST                1 (s)
+            102 CALL                     1
+            110 LOAD_CONST               2 (1)
+            112 BINARY_OP               10 (-)
+            116 BINARY_OP                5 (*)
+            120 CALL                     1
+            128 CALL                     1
+            136 CALL                     2
+            144 BINARY_SUBSCR
+            148 RETURN_VALUE
+
+Disassembly of clamp01:
+  5           0 RESUME                   0
+
+  6           2 LOAD_GLOBAL              1 (NULL + max)
+             12 LOAD_CONST               1 (0.0)
+             14 LOAD_GLOBAL              3 (NULL + min)
+             24 LOAD_CONST               2 (1.0)
+             26 LOAD_FAST                0 (x)
+             28 CALL                     2
+             36 CALL                     2
+             44 RETURN_VALUE
+
+Disassembly of compute_dimensions:
+105           0 RESUME                   0
+
+106           2 LOAD_FAST                2 (W)
+              4 LOAD_CONST               1 ('weights')
+              6 BINARY_SUBSCR
+             10 GET_ITER
+             12 LOAD_FAST_AND_CLEAR      3 (k)
+             14 SWAP                     2
+             16 BUILD_MAP                0
+             18 SWAP                     2
+        >>   20 FOR_ITER                29 (to 82)
+             24 STORE_FAST               3 (k)
+             26 LOAD_FAST                3 (k)
+             28 LOAD_GLOBAL              1 (NULL + round)
+             38 LOAD_GLOBAL              3 (NULL + DIMENSIONS)
+             48 LOAD_FAST                3 (k)
+             50 BINARY_SUBSCR
+             54 LOAD_FAST                0 (per)
+             56 LOAD_FAST                1 (run)
+             58 LOAD_FAST                2 (W)
+             60 CALL                     3
+             68 LOAD_CONST               2 (4)
+             70 CALL                     2
+             78 MAP_ADD                  2
+             80 JUMP_BACKWARD           31 (to 20)
+        >>   82 END_FOR
+             84 SWAP                     2
+             86 STORE_FAST               3 (k)
+             88 RETURN_VALUE
+        >>   90 SWAP                     2
+             92 POP_TOP
+             94 SWAP                     2
+             96 STORE_FAST               3 (k)
+             98 RERAISE                  0
+ExceptionTable:
+  16 to 82 -> 90 [2]
+
+Disassembly of psi:
+              0 MAKE_CELL                2 (bins)
+              2 MAKE_CELL               13 (lo)
+              4 MAKE_CELL               14 (width)
+
+ 16           6 RESUME                   0
+
+ 18           8 LOAD_GLOBAL              1 (NULL + len)
+             18 LOAD_FAST                0 (ref)
+             20 CALL                     1
+             28 LOAD_CONST               1 (2)
+             30 COMPARE_OP               2 (<)
+             34 POP_JUMP_IF_TRUE        14 (to 64)
+             36 LOAD_GLOBAL              1 (NULL + len)
+             46 LOAD_FAST                1 (cur)
+             48 CALL                     1
+             56 LOAD_CONST               1 (2)
+             58 COMPARE_OP               2 (<)
+             62 POP_JUMP_IF_FALSE        1 (to 66)
+
+ 19     >>   64 RETURN_CONST             2 (0.0)
+
+ 20     >>   66 LOAD_GLOBAL              3 (NULL + min)
+             76 LOAD_FAST                0 (ref)
+             78 LOAD_FAST                1 (cur)
+             80 BINARY_OP                0 (+)
+             84 CALL                     1
+             92 LOAD_GLOBAL              5 (NULL + max)
+            102 LOAD_FAST                0 (ref)
+            104 LOAD_FAST                1 (cur)
+            106 BINARY_OP                0 (+)
+            110 CALL                     1
+            118 SWAP                     2
+            120 STORE_DEREF             13 (lo)
+            122 STORE_FAST               3 (hi)
+
+ 21         124 LOAD_FAST                3 (hi)
+            126 LOAD_DEREF              13 (lo)
+            128 COMPARE_OP              26 (<=)
+            132 POP_JUMP_IF_FALSE        1 (to 136)
+
+ 22         134 RETURN_CONST             2 (0.0)
+
+ 23     >>  136 LOAD_FAST                3 (hi)
+            138 LOAD_DEREF              13 (lo)
+            140 BINARY_OP               10 (-)
+            144 LOAD_DEREF               2 (bins)
+            146 BINARY_OP               11 (/)
+            150 STORE_DEREF             14 (width)
+
+ 24         152 LOAD_GLOBAL              7 (NULL + range)
+            162 LOAD_DEREF               2 (bins)
+            164 LOAD_CONST               3 (1)
+            166 BINARY_OP                0 (+)
+            170 CALL                     1
+            178 GET_ITER
+            180 LOAD_FAST_AND_CLEAR      4 (i)
+            182 SWAP                     2
+            184 BUILD_LIST               0
+            186 SWAP                     2
+        >>  188 FOR_ITER                10 (to 212)
+            192 STORE_FAST               4 (i)
+            194 LOAD_DEREF              13 (lo)
+            196 LOAD_FAST                4 (i)
+            198 LOAD_DEREF              14 (width)
+            200 BINARY_OP                5 (*)
+            204 BINARY_OP                0 (+)
+            208 LIST_APPEND              2
+            210 JUMP_BACKWARD           12 (to 188)
+        >>  212 END_FOR
+            214 STORE_FAST               5 (edges)
+            216 STORE_FAST               4 (i)
+
+ 26         218 LOAD_CLOSURE             2 (bins)
+            220 LOAD_CLOSURE            13 (lo)
+            222 LOAD_CLOSURE            14 (width)
+            224 BUILD_TUPLE              3
+            226 LOAD_CONST               4 (<code object hist at 0x7f59f50812f0, file "observathon_score\normalize.py", line 26>)
+            228 MAKE_FUNCTION            8 (closure)
+            230 STORE_FAST               6 (hist)
+
+ 34         232 PUSH_NULL
+            234 LOAD_FAST                6 (hist)
+            236 LOAD_FAST                0 (ref)
+            238 CALL                     1
+            246 PUSH_NULL
+            248 LOAD_FAST                6 (hist)
+            250 LOAD_FAST                1 (cur)
+            252 CALL                     1
+            260 STORE_FAST               8 (cu)
+            262 STORE_FAST               7 (pr)
+
+ 35         264 LOAD_CONST               5 (0)
+            266 LOAD_CONST               6 (None)
+            268 IMPORT_NAME              4 (math)
+            270 STORE_FAST               9 (math)
+
+ 36         272 LOAD_CONST               2 (0.0)
+            274 STORE_FAST              10 (total)
+
+ 37         276 LOAD_GLOBAL             11 (NULL + zip)
+            286 LOAD_FAST                7 (pr)
+            288 LOAD_FAST                8 (cu)
+            290 CALL                     2
+            298 GET_ITER
+        >>  300 FOR_ITER                58 (to 420)
+            304 UNPACK_SEQUENCE          2
+            308 STORE_FAST              11 (p)
+            310 STORE_FAST              12 (q)
+
+ 38         312 LOAD_GLOBAL              5 (NULL + max)
+            322 LOAD_FAST               11 (p)
+            324 LOAD_CONST               7 (0.0001)
+            326 CALL                     2
+            334 STORE_FAST              11 (p)
+            336 LOAD_GLOBAL              5 (NULL + max)
+            346 LOAD_FAST               12 (q)
+            348 LOAD_CONST               7 (0.0001)
+            350 CALL                     2
+            358 STORE_FAST              12 (q)
+
+ 39         360 LOAD_FAST               10 (total)
+            362 LOAD_FAST               12 (q)
+            364 LOAD_FAST               11 (p)
+            366 BINARY_OP               10 (-)
+            370 LOAD_FAST                9 (math)
+            372 LOAD_ATTR               13 (NULL|self + log)
+            392 LOAD_FAST               12 (q)
+            394 LOAD_FAST               11 (p)
+            396 BINARY_OP               11 (/)
+            400 CALL                     1
+            408 BINARY_OP                5 (*)
+            412 BINARY_OP               13 (+=)
+            416 STORE_FAST              10 (total)
+            418 JUMP_BACKWARD           60 (to 300)
+
+ 37     >>  420 END_FOR
+
+ 40         422 LOAD_FAST               10 (total)
+            424 RETURN_VALUE
+        >>  426 SWAP                     2
+            428 POP_TOP
+
+ 24         430 SWAP                     2
+            432 STORE_FAST               4 (i)
+            434 RERAISE                  0
+ExceptionTable:
+  184 to 212 -> 426 [2]
+
+Disassembly of <code object hist at 0x7f59f50812f0, file "observathon_score\normalize.py", line 26>:
+              0 COPY_FREE_VARS           3
+
+ 26           2 RESUME                   0
+
+ 27           4 LOAD_CONST               1 (0)
+              6 BUILD_LIST               1
+              8 LOAD_DEREF               6 (bins)
+             10 BINARY_OP                5 (*)
+             14 STORE_FAST               1 (counts)
+
+ 28          16 LOAD_FAST                0 (xs)
+             18 GET_ITER
+        >>   20 FOR_ITER                49 (to 122)
+             24 STORE_FAST               2 (x)
+
+ 29          26 LOAD_DEREF               8 (width)
+             28 POP_JUMP_IF_FALSE       30 (to 90)
+             30 LOAD_GLOBAL              1 (NULL + min)
+             40 LOAD_DEREF               6 (bins)
+             42 LOAD_CONST               2 (1)
+             44 BINARY_OP               10 (-)
+             48 LOAD_GLOBAL              3 (NULL + int)
+             58 LOAD_FAST                2 (x)
+             60 LOAD_DEREF               7 (lo)
+             62 BINARY_OP               10 (-)
+             66 LOAD_DEREF               8 (width)
+             68 BINARY_OP               11 (/)
+             72 CALL                     1
+             80 CALL                     2
+             88 JUMP_FORWARD             1 (to 92)
+        >>   90 LOAD_CONST               1 (0)
+        >>   92 STORE_FAST               3 (idx)
+
+ 30          94 LOAD_FAST                1 (counts)
+             96 LOAD_FAST                3 (idx)
+             98 COPY                     2
+            100 COPY                     2
+            102 BINARY_SUBSCR
+            106 LOAD_CONST               2 (1)
+            108 BINARY_OP               13 (+=)
+            112 SWAP                     3
+            114 SWAP                     2
+            116 STORE_SUBSCR
+            120 JUMP_BACKWARD           51 (to 20)
+
+ 28     >>  122 END_FOR
+
+ 31         124 LOAD_GLOBAL              5 (NULL + len)
+            134 LOAD_FAST                0 (xs)
+            136 CALL                     1
+            144 STORE_FAST               4 (n)
+
+ 32         146 LOAD_FAST                1 (counts)
+            148 GET_ITER
+            150 LOAD_FAST_AND_CLEAR      5 (c)
+            152 SWAP                     2
+            154 BUILD_LIST               0
+            156 SWAP                     2
+        >>  158 FOR_ITER                11 (to 184)
+            162 STORE_FAST               5 (c)
+            164 LOAD_FAST                4 (n)
+            166 POP_JUMP_IF_FALSE        5 (to 178)
+            168 LOAD_FAST                5 (c)
+            170 LOAD_FAST                4 (n)
+            172 BINARY_OP               11 (/)
+            176 JUMP_FORWARD             1 (to 180)
+        >>  178 LOAD_CONST               3 (0.0)
+        >>  180 LIST_APPEND              2
+            182 JUMP_BACKWARD           13 (to 158)
+        >>  184 END_FOR
+            186 SWAP                     2
+            188 STORE_FAST               5 (c)
+            190 RETURN_VALUE
+        >>  192 SWAP                     2
+            194 POP_TOP
+            196 SWAP                     2
+            198 STORE_FAST               5 (c)
+            200 RERAISE                  0
+ExceptionTable:
+  154 to 184 -> 192 [2]
+
+Disassembly of reward_lower_is_better:
+  9           0 RESUME                   0
+
+ 11           2 LOAD_FAST                2 (ceiling)
+              4 LOAD_FAST                1 (target)
+              6 COMPARE_OP              26 (<=)
+             10 POP_JUMP_IF_FALSE        9 (to 30)
+
+ 12          12 LOAD_FAST                0 (value)
+             14 LOAD_FAST                1 (target)
+             16 COMPARE_OP              26 (<=)
+             20 POP_JUMP_IF_FALSE        2 (to 26)
+             22 LOAD_CONST               1 (1.0)
+             24 RETURN_VALUE
+        >>   26 LOAD_CONST               2 (0.0)
+             28 RETURN_VALUE
+
+ 13     >>   30 LOAD_GLOBAL              1 (NULL + clamp01)
+             40 LOAD_FAST                2 (ceiling)
+             42 LOAD_FAST                0 (value)
+             44 BINARY_OP               10 (-)
+             48 LOAD_FAST                2 (ceiling)
+             50 LOAD_FAST                1 (target)
+             52 BINARY_OP               10 (-)
+             56 BINARY_OP               11 (/)
+             60 CALL                     1
+             68 RETURN_VALUE
+
+Disassembly of score_correct:
+ 26           0 RESUME                   0
+
+ 27           2 LOAD_FAST                0 (per)
+              4 POP_JUMP_IF_FALSE       30 (to 66)
+              6 LOAD_GLOBAL              1 (NULL + sum)
+             16 LOAD_CONST               1 (<code object <genexpr> at 0x7f59f50206c0, file "observathon_score\dimensions.py", line 27>)
+             18 MAKE_FUNCTION            0
+             20 LOAD_FAST                0 (per)
+             22 GET_ITER
+             24 CALL                     0
+             32 CALL                     1
+             40 LOAD_GLOBAL              3 (NULL + len)
+             50 LOAD_FAST                0 (per)
+             52 CALL                     1
+             60 BINARY_OP               11 (/)
+             64 RETURN_VALUE
+        >>   66 LOAD_CONST               2 (0.0)
+             68 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x7f59f50206c0, file "observathon_score\dimensions.py", line 27>:
+ 27           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                 9 (to 30)
+             12 STORE_FAST               1 (p)
+             14 LOAD_FAST                1 (p)
+             16 LOAD_CONST               0 ('hit')
+             18 BINARY_SUBSCR
+             22 YIELD_VALUE              1
+             24 RESUME                   1
+             26 POP_TOP
+             28 JUMP_BACKWARD           11 (to 8)
+        >>   30 END_FOR
+             32 RETURN_CONST             1 (None)
+        >>   34 CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+             36 RERAISE                  1
+ExceptionTable:
+  4 to 32 -> 34 [0] lasti
+
+Disassembly of score_cost:
+ 45           0 RESUME                   0
+
+ 46           2 LOAD_FAST                1 (run)
+              4 LOAD_ATTR                1 (NULL|self + get)
+             24 LOAD_CONST               1 ('config_used')
+             26 BUILD_MAP                0
+             28 CALL                     2
+             36 COPY                     1
+             38 POP_JUMP_IF_TRUE         2 (to 44)
+             40 POP_TOP
+             42 BUILD_MAP                0
+        >>   44 LOAD_ATTR                1 (NULL|self + get)
+             64 LOAD_CONST               2 ('model_price_tier')
+             66 LOAD_CONST               3 ('premium')
+             68 CALL                     2
+             76 STORE_FAST               3 (tier)
+
+ 47          78 LOAD_FAST                2 (W)
+             80 LOAD_CONST               4 ('tier_price')
+             82 BINARY_SUBSCR
+             86 LOAD_ATTR                1 (NULL|self + get)
+            106 LOAD_FAST                3 (tier)
+            108 LOAD_FAST                2 (W)
+            110 LOAD_CONST               4 ('tier_price')
+            112 BINARY_SUBSCR
+            116 LOAD_CONST               3 ('premium')
+            118 BINARY_SUBSCR
+            122 CALL                     2
+            130 UNPACK_SEQUENCE          2
+            134 STORE_FAST               4 (pin)
+            136 STORE_FAST               5 (pout)
+
+ 48         138 LOAD_CONST               5 (0.0)
+            140 STORE_FAST               6 (total)
+
+ 49         142 LOAD_FAST                0 (per)
+            144 GET_ITER
+        >>  146 FOR_ITER                79 (to 308)
+            150 STORE_FAST               7 (p)
+
+ 50         152 LOAD_FAST                7 (p)
+            154 LOAD_CONST               6 ('row')
+            156 BINARY_SUBSCR
+            160 LOAD_ATTR                1 (NULL|self + get)
+            180 LOAD_CONST               7 ('usage')
+            182 BUILD_MAP                0
+            184 CALL                     2
+            192 COPY                     1
+            194 POP_JUMP_IF_TRUE         2 (to 200)
+            196 POP_TOP
+            198 BUILD_MAP                0
+        >>  200 STORE_FAST               8 (u)
+
+ 51         202 LOAD_FAST                6 (total)
+            204 LOAD_FAST                8 (u)
+            206 LOAD_ATTR                1 (NULL|self + get)
+            226 LOAD_CONST               8 ('prompt_tokens')
+            228 LOAD_CONST               9 (0)
+            230 CALL                     2
+            238 LOAD_CONST              10 (1000000.0)
+            240 BINARY_OP               11 (/)
+            244 LOAD_FAST                4 (pin)
+            246 BINARY_OP                5 (*)
+            250 LOAD_FAST                8 (u)
+            252 LOAD_ATTR                1 (NULL|self + get)
+            272 LOAD_CONST              11 ('completion_tokens')
+            274 LOAD_CONST               9 (0)
+            276 CALL                     2
+            284 LOAD_CONST              10 (1000000.0)
+            286 BINARY_OP               11 (/)
+            290 LOAD_FAST                5 (pout)
+            292 BINARY_OP                5 (*)
+            296 BINARY_OP                0 (+)
+            300 BINARY_OP               13 (+=)
+            304 STORE_FAST               6 (total)
+            306 JUMP_BACKWARD           81 (to 146)
+
+ 49     >>  308 END_FOR
+
+ 52         310 LOAD_GLOBAL              3 (NULL + max)
+            320 LOAD_CONST              12 (1)
+            322 LOAD_GLOBAL              5 (NULL + sum)
+            332 LOAD_CONST              13 (<code object <genexpr> at 0x7f59f5132a30, file "observathon_score\dimensions.py", line 52>)
+            334 MAKE_FUNCTION            0
+            336 LOAD_FAST                0 (per)
+            338 GET_ITER
+            340 CALL                     0
+            348 CALL                     1
+            356 CALL                     2
+            364 STORE_FAST               9 (n_correct)
+
+ 53         366 LOAD_FAST                6 (total)
+            368 LOAD_FAST                9 (n_correct)
+            370 BINARY_OP               11 (/)
+            374 STORE_FAST              10 (cpc)
+
+ 54         376 LOAD_GLOBAL              7 (NULL + reward_lower_is_better)
+            386 LOAD_FAST               10 (cpc)
+            388 LOAD_FAST                2 (W)
+            390 LOAD_CONST              14 ('cost_target_per_correct')
+            392 BINARY_SUBSCR
+            396 LOAD_FAST                2 (W)
+            398 LOAD_CONST              15 ('cost_ceiling_per_correct')
+            400 BINARY_SUBSCR
+            404 CALL                     3
+            412 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x7f59f5132a30, file "observathon_score\dimensions.py", line 52>:
+ 52           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                15 (to 42)
+             12 STORE_FAST               1 (p)
+             14 LOAD_FAST                1 (p)
+             16 LOAD_CONST               0 ('hit')
+             18 BINARY_SUBSCR
+             22 LOAD_CONST               1 (1.0)
+             24 COMPARE_OP              92 (>=)
+             28 POP_JUMP_IF_TRUE         1 (to 32)
+             30 JUMP_BACKWARD           12 (to 8)
+        >>   32 LOAD_CONST               2 (1)
+             34 YIELD_VALUE              1
+             36 RESUME                   1
+             38 POP_TOP
+             40 JUMP_BACKWARD           17 (to 8)
+        >>   42 END_FOR
+             44 RETURN_CONST             3 (None)
+        >>   46 CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+             48 RERAISE                  1
+ExceptionTable:
+  4 to 28 -> 46 [0] lasti
+  32 to 44 -> 46 [0] lasti
+
+Disassembly of score_drift:
+ 57           0 RESUME                   0
+
+ 58           2 LOAD_GLOBAL              1 (NULL + len)
+             12 LOAD_FAST                0 (per)
+             14 CALL                     1
+             22 LOAD_CONST               1 (8)
+             24 COMPARE_OP               2 (<)
+             28 POP_JUMP_IF_FALSE        1 (to 32)
+
+ 59          30 RETURN_CONST             2 (1.0)
+
+ 60     >>   32 LOAD_GLOBAL              3 (NULL + sorted)
+             42 LOAD_FAST                0 (per)
+             44 LOAD_CONST               3 (<code object <lambda> at 0x7f59f4fd8f30, file "observathon_score\dimensions.py", line 60>)
+             46 MAKE_FUNCTION            0
+             48 KW_NAMES                 4 (('key',))
+             50 CALL                     2
+             58 STORE_FAST               3 (ordered)
+
+ 61          60 LOAD_FAST                3 (ordered)
+             62 GET_ITER
+             64 LOAD_FAST_AND_CLEAR      4 (p)
+             66 SWAP                     2
+             68 BUILD_LIST               0
+             70 SWAP                     2
+        >>   72 FOR_ITER                 7 (to 90)
+             76 STORE_FAST               4 (p)
+             78 LOAD_FAST                4 (p)
+             80 LOAD_CONST               5 ('quality')
+             82 BINARY_SUBSCR
+             86 LIST_APPEND              2
+             88 JUMP_BACKWARD            9 (to 72)
+        >>   90 END_FOR
+             92 STORE_FAST               5 (q)
+             94 STORE_FAST               4 (p)
+
+ 62          96 LOAD_GLOBAL              1 (NULL + len)
+            106 LOAD_FAST                5 (q)
+            108 CALL                     1
+            116 LOAD_CONST               6 (2)
+            118 BINARY_OP                2 (//)
+            122 STORE_FAST               6 (half)
+
+ 63         124 LOAD_GLOBAL              5 (NULL + clamp01)
+            134 LOAD_CONST               2 (1.0)
+            136 LOAD_GLOBAL              7 (NULL + psi)
+            146 LOAD_FAST                5 (q)
+            148 LOAD_CONST               0 (None)
+            150 LOAD_FAST                6 (half)
+            152 BINARY_SLICE
+            154 LOAD_FAST                5 (q)
+            156 LOAD_FAST                6 (half)
+            158 LOAD_CONST               0 (None)
+            160 BINARY_SLICE
+            162 CALL                     2
+            170 LOAD_FAST                2 (W)
+            172 LOAD_CONST               7 ('psi_max')
+            174 BINARY_SUBSCR
+            178 BINARY_OP               11 (/)
+            182 BINARY_OP               10 (-)
+            186 CALL                     1
+            194 RETURN_VALUE
+        >>  196 SWAP                     2
+            198 POP_TOP
+
+ 61         200 SWAP                     2
+            202 STORE_FAST               4 (p)
+            204 RERAISE                  0
+ExceptionTable:
+  68 to 90 -> 196 [2]
+
+Disassembly of <code object <lambda> at 0x7f59f4fd8f30, file "observathon_score\dimensions.py", line 60>:
+ 60           0 RESUME                   0
+              2 LOAD_GLOBAL              1 (NULL + str)
+             12 LOAD_FAST                0 (p)
+             14 LOAD_CONST               1 ('row')
+             16 BINARY_SUBSCR
+             20 LOAD_ATTR                3 (NULL|self + get)
+             40 LOAD_CONST               2 ('session')
+             42 CALL                     1
+             50 CALL                     1
+             58 LOAD_GLOBAL              5 (NULL + int)
+             68 LOAD_FAST                0 (p)
+             70 LOAD_CONST               1 ('row')
+             72 BINARY_SUBSCR
+             76 LOAD_ATTR                3 (NULL|self + get)
+             96 LOAD_CONST               3 ('turn')
+             98 LOAD_CONST               4 (0)
+            100 CALL                     2
+            108 CALL                     1
+            116 BUILD_TUPLE              2
+            118 RETURN_VALUE
+
+Disassembly of score_error:
+ 34           0 RESUME                   0
+
+ 35           2 LOAD_GLOBAL              1 (NULL + sum)
+             12 LOAD_CONST               1 (<code object <genexpr> at 0x7f59f51414d0, file "observathon_score\dimensions.py", line 35>)
+             14 MAKE_FUNCTION            0
+             16 LOAD_FAST                0 (per)
+             18 GET_ITER
+             20 CALL                     0
+             28 CALL                     1
+             36 STORE_FAST               3 (fails)
+
+ 37          38 LOAD_FAST                0 (per)
+             40 POP_JUMP_IF_FALSE       17 (to 76)
+             42 LOAD_CONST               2 (1.0)
+             44 LOAD_FAST                3 (fails)
+             46 LOAD_GLOBAL              3 (NULL + len)
+             56 LOAD_FAST                0 (per)
+             58 CALL                     1
+             66 BINARY_OP               11 (/)
+             70 BINARY_OP               10 (-)
+             74 RETURN_VALUE
+        >>   76 LOAD_CONST               3 (0.0)
+             78 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x7f59f51414d0, file "observathon_score\dimensions.py", line 35>:
+ 35           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                63 (to 138)
+             12 STORE_FAST               1 (p)
+             14 LOAD_FAST                1 (p)
+             16 LOAD_CONST               0 ('row')
+             18 BINARY_SUBSCR
+             22 LOAD_ATTR                1 (NULL|self + get)
+             42 LOAD_CONST               1 ('status')
+             44 CALL                     1
+             52 LOAD_GLOBAL              2 (_FAIL)
+             62 CONTAINS_OP              0
+             64 POP_JUMP_IF_TRUE        31 (to 128)
+
+ 36          66 LOAD_FAST                1 (p)
+             68 LOAD_CONST               2 ('exp')
+             70 BINARY_SUBSCR
+             74 LOAD_CONST               3 ('answer_kind')
+             76 BINARY_SUBSCR
+             80 LOAD_CONST               4 ('refusal')
+             82 COMPARE_OP              55 (!=)
+             86 POP_JUMP_IF_FALSE       24 (to 136)
+             88 LOAD_FAST                1 (p)
+             90 LOAD_CONST               0 ('row')
+             92 BINARY_SUBSCR
+             96 LOAD_ATTR                1 (NULL|self + get)
+            116 LOAD_CONST               5 ('answer')
+            118 CALL                     1
+            126 POP_JUMP_IF_TRUE         4 (to 136)
+
+ 35     >>  128 LOAD_CONST               6 (1)
+            130 YIELD_VALUE              1
+            132 RESUME                   1
+            134 POP_TOP
+        >>  136 JUMP_BACKWARD           65 (to 8)
+        >>  138 END_FOR
+            140 RETURN_CONST             7 (None)
+        >>  142 CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+            144 RERAISE                  1
+ExceptionTable:
+  4 to 140 -> 142 [0] lasti
+
+Disassembly of score_latency:
+ 40           0 RESUME                   0
+
+ 41           2 LOAD_GLOBAL              1 (NULL + _p95)
+             12 LOAD_FAST                0 (per)
+             14 GET_ITER
+             16 LOAD_FAST_AND_CLEAR      3 (p)
+             18 SWAP                     2
+             20 BUILD_LIST               0
+             22 SWAP                     2
+        >>   24 FOR_ITER                23 (to 74)
+             28 STORE_FAST               3 (p)
+             30 LOAD_FAST                3 (p)
+             32 LOAD_CONST               1 ('row')
+             34 BINARY_SUBSCR
+             38 LOAD_ATTR                3 (NULL|self + get)
+             58 LOAD_CONST               2 ('latency_ms')
+             60 LOAD_CONST               3 (0)
+             62 CALL                     2
+             70 LIST_APPEND              2
+             72 JUMP_BACKWARD           25 (to 24)
+        >>   74 END_FOR
+             76 SWAP                     2
+             78 STORE_FAST               3 (p)
+             80 CALL                     1
+             88 STORE_FAST               4 (p95)
+
+ 42          90 LOAD_GLOBAL              5 (NULL + reward_lower_is_better)
+            100 LOAD_FAST                4 (p95)
+            102 LOAD_FAST                2 (W)
+            104 LOAD_CONST               4 ('latency_target_ms')
+            106 BINARY_SUBSCR
+            110 LOAD_FAST                2 (W)
+            112 LOAD_CONST               5 ('latency_ceiling_ms')
+            114 BINARY_SUBSCR
+            118 CALL                     3
+            126 RETURN_VALUE
+        >>  128 SWAP                     2
+            130 POP_TOP
+
+ 41         132 SWAP                     2
+            134 STORE_FAST               3 (p)
+            136 RERAISE                  0
+ExceptionTable:
+  20 to 74 -> 128 [4]
+
+Disassembly of score_prompt:
+ 66           0 RESUME                   0
+
+ 71           2 LOAD_FAST                0 (per)
+              4 POP_JUMP_IF_TRUE         1 (to 8)
+
+ 72           6 RETURN_CONST             1 (0.0)
+
+ 73     >>    8 BUILD_LIST               0
+             10 STORE_FAST               3 (vals)
+
+ 74          12 LOAD_FAST                0 (per)
+             14 GET_ITER
+        >>   16 EXTENDED_ARG             1
+             18 FOR_ITER               420 (to 862)
+             22 STORE_FAST               4 (p)
+
+ 75          24 LOAD_FAST                4 (p)
+             26 LOAD_CONST               2 ('exp')
+             28 BINARY_SUBSCR
+             32 STORE_FAST               5 (exp)
+             34 LOAD_FAST                4 (p)
+             36 LOAD_CONST               3 ('row')
+             38 BINARY_SUBSCR
+             42 STORE_FAST               6 (row)
+             44 LOAD_FAST                5 (exp)
+             46 LOAD_CONST               4 ('answer_kind')
+             48 BINARY_SUBSCR
+             52 STORE_FAST               7 (kind)
+
+ 76          54 LOAD_FAST                6 (row)
+             56 LOAD_ATTR                1 (NULL|self + get)
+             76 LOAD_CONST               5 ('answer')
+             78 CALL                     1
+             86 STORE_FAST               8 (a)
+             88 LOAD_GLOBAL              3 (NULL + isinstance)
+             98 LOAD_FAST                8 (a)
+            100 LOAD_GLOBAL              4 (str)
+            110 CALL                     2
+            118 POP_JUMP_IF_FALSE        2 (to 124)
+            120 LOAD_FAST                8 (a)
+            122 JUMP_FORWARD            14 (to 152)
+        >>  124 LOAD_FAST                8 (a)
+            126 POP_JUMP_IF_NOT_NONE     2 (to 132)
+            128 LOAD_CONST               6 ('')
+            130 JUMP_FORWARD            10 (to 152)
+        >>  132 LOAD_GLOBAL              5 (NULL + str)
+            142 LOAD_FAST                8 (a)
+            144 CALL                     1
+        >>  152 STORE_FAST               8 (a)
+
+ 77         154 BUILD_LIST               0
+            156 STORE_FAST               9 (ind)
+
+ 78         158 LOAD_FAST                7 (kind)
+            160 LOAD_CONST               7 ('refusal')
+            162 COMPARE_OP              40 (==)
+            166 POP_JUMP_IF_FALSE       30 (to 228)
+
+ 79         168 LOAD_FAST                9 (ind)
+            170 LOAD_ATTR                7 (NULL|self + append)
+            190 LOAD_GLOBAL              9 (NULL + min)
+            200 LOAD_CONST               8 (1.0)
+            202 LOAD_FAST                4 (p)
+            204 LOAD_CONST               9 ('hit')
+            206 BINARY_SUBSCR
+            210 CALL                     2
+            218 CALL                     1
+            226 POP_TOP
+
+ 80     >>  228 LOAD_FAST                7 (kind)
+            230 LOAD_CONST              10 ('purchase_total')
+            232 COMPARE_OP              40 (==)
+            236 POP_JUMP_IF_FALSE       27 (to 292)
+
+ 81         238 LOAD_FAST                9 (ind)
+            240 LOAD_ATTR                7 (NULL|self + append)
+            260 LOAD_FAST                4 (p)
+            262 LOAD_CONST               9 ('hit')
+            264 BINARY_SUBSCR
+            268 LOAD_CONST               8 (1.0)
+            270 COMPARE_OP              92 (>=)
+            274 POP_JUMP_IF_FALSE        2 (to 280)
+            276 LOAD_CONST               8 (1.0)
+            278 JUMP_FORWARD             1 (to 282)
+        >>  280 LOAD_CONST               1 (0.0)
+        >>  282 CALL                     1
+            290 POP_TOP
+
+ 82     >>  292 LOAD_GLOBAL             11 (NULL + len)
+            302 LOAD_FAST                6 (row)
+            304 LOAD_ATTR                1 (NULL|self + get)
+            324 LOAD_CONST              11 ('tools_used')
+            326 BUILD_LIST               0
+            328 CALL                     2
+            336 COPY                     1
+            338 POP_JUMP_IF_TRUE         2 (to 344)
+            340 POP_TOP
+            342 BUILD_LIST               0
+        >>  344 CALL                     1
+            352 STORE_FAST              10 (used)
+
+ 83         354 LOAD_GLOBAL             11 (NULL + len)
+            364 LOAD_FAST                5 (exp)
+            366 LOAD_ATTR                1 (NULL|self + get)
+            386 LOAD_CONST              12 ('tools')
+            388 BUILD_LIST               0
+            390 CALL                     2
+            398 COPY                     1
+            400 POP_JUMP_IF_TRUE         2 (to 406)
+            402 POP_TOP
+            404 BUILD_LIST               0
+        >>  406 CALL                     1
+            414 COPY                     1
+            416 POP_JUMP_IF_TRUE         2 (to 422)
+            418 POP_TOP
+            420 LOAD_CONST              13 (1)
+        >>  422 STORE_FAST              11 (need)
+
+ 84         424 LOAD_FAST                9 (ind)
+            426 LOAD_ATTR                7 (NULL|self + append)
+            446 LOAD_FAST               10 (used)
+            448 LOAD_FAST               11 (need)
+            450 COMPARE_OP              26 (<=)
+            454 POP_JUMP_IF_FALSE        2 (to 460)
+            456 LOAD_CONST               8 (1.0)
+            458 JUMP_FORWARD            30 (to 520)
+        >>  460 LOAD_GLOBAL             13 (NULL + max)
+            470 LOAD_CONST               1 (0.0)
+            472 LOAD_CONST               8 (1.0)
+            474 LOAD_FAST               10 (used)
+            476 LOAD_FAST               11 (need)
+            478 BINARY_OP               10 (-)
+            482 LOAD_GLOBAL             13 (NULL + max)
+            492 LOAD_CONST              13 (1)
+            494 LOAD_FAST               11 (need)
+            496 CALL                     2
+            504 BINARY_OP               11 (/)
+            508 BINARY_OP               10 (-)
+            512 CALL                     2
+        >>  520 CALL                     1
+            528 POP_TOP
+
+ 85         530 LOAD_FAST                6 (row)
+            532 LOAD_ATTR                1 (NULL|self + get)
+            552 LOAD_CONST              14 ('pii')
+            554 CALL                     1
+            562 POP_JUMP_IF_FALSE       61 (to 686)
+
+ 86         564 LOAD_FAST                9 (ind)
+            566 LOAD_ATTR                7 (NULL|self + append)
+            586 LOAD_GLOBAL             14 (_EMAIL)
+            596 LOAD_ATTR               17 (NULL|self + search)
+            616 LOAD_FAST                8 (a)
+            618 CALL                     1
+            626 POP_JUMP_IF_TRUE        21 (to 670)
+            628 LOAD_GLOBAL             18 (_PHONE)
+            638 LOAD_ATTR               17 (NULL|self + search)
+            658 LOAD_FAST                8 (a)
+            660 CALL                     1
+            668 POP_JUMP_IF_FALSE        2 (to 674)
+        >>  670 LOAD_CONST               1 (0.0)
+            672 JUMP_FORWARD             1 (to 676)
+        >>  674 LOAD_CONST               8 (1.0)
+        >>  676 CALL                     1
+            684 POP_TOP
+
+ 87     >>  686 LOAD_FAST                5 (exp)
+            688 LOAD_ATTR                1 (NULL|self + get)
+            708 LOAD_CONST              15 ('_injection')
+            710 CALL                     1
+            718 POP_JUMP_IF_FALSE       27 (to 774)
+
+ 88         720 LOAD_FAST                9 (ind)
+            722 LOAD_ATTR                7 (NULL|self + append)
+            742 LOAD_FAST                4 (p)
+            744 LOAD_CONST               9 ('hit')
+            746 BINARY_SUBSCR
+            750 LOAD_CONST               8 (1.0)
+            752 COMPARE_OP              92 (>=)
+            756 POP_JUMP_IF_FALSE        2 (to 762)
+            758 LOAD_CONST               8 (1.0)
+            760 JUMP_FORWARD             1 (to 764)
+        >>  762 LOAD_CONST               1 (0.0)
+        >>  764 CALL                     1
+            772 POP_TOP
+
+ 89     >>  774 LOAD_FAST                9 (ind)
+            776 POP_JUMP_IF_TRUE         2 (to 782)
+            778 EXTENDED_ARG             1
+            780 JUMP_BACKWARD          383 (to 16)
+
+ 90     >>  782 LOAD_FAST                3 (vals)
+            784 LOAD_ATTR                7 (NULL|self + append)
+            804 LOAD_GLOBAL             21 (NULL + sum)
+            814 LOAD_FAST                9 (ind)
+            816 CALL                     1
+            824 LOAD_GLOBAL             11 (NULL + len)
+            834 LOAD_FAST                9 (ind)
+            836 CALL                     1
+            844 BINARY_OP               11 (/)
+            848 CALL                     1
+            856 POP_TOP
+            858 EXTENDED_ARG             1
+            860 JUMP_BACKWARD          423 (to 16)
+
+ 74     >>  862 END_FOR
+
+ 91         864 LOAD_FAST                3 (vals)
+            866 POP_JUMP_IF_FALSE       23 (to 914)
+            868 LOAD_GLOBAL             21 (NULL + sum)
+            878 LOAD_FAST                3 (vals)
+            880 CALL                     1
+            888 LOAD_GLOBAL             11 (NULL + len)
+            898 LOAD_FAST                3 (vals)
+            900 CALL                     1
+            908 BINARY_OP               11 (/)
+            912 JUMP_FORWARD             1 (to 916)
+        >>  914 LOAD_CONST               1 (0.0)
+        >>  916 STORE_FAST              12 (base)
+
+ 92         918 LOAD_GLOBAL             23 (NULL + int)
+            928 LOAD_FAST                1 (run)
+            930 LOAD_ATTR                1 (NULL|self + get)
+            950 LOAD_CONST              16 ('config_used')
+            952 CALL                     1
+            960 COPY                     1
+            962 POP_JUMP_IF_TRUE         2 (to 968)
+            964 POP_TOP
+            966 BUILD_MAP                0
+        >>  968 LOAD_ATTR                1 (NULL|self + get)
+            988 LOAD_CONST              17 ('prompt_chars')
+            990 LOAD_CONST              18 (0)
+            992 CALL                     2
+           1000 CALL                     1
+           1008 STORE_FAST              13 (plen)
+
+ 93        1010 LOAD_FAST                2 (W)
+           1012 LOAD_ATTR                1 (NULL|self + get)
+           1032 LOAD_CONST              19 ('prompt_free_chars')
+           1034 LOAD_CONST              20 (600)
+           1036 CALL                     2
+           1044 STORE_FAST              14 (L0)
+           1046 LOAD_FAST                2 (W)
+           1048 LOAD_ATTR                1 (NULL|self + get)
+           1068 LOAD_CONST              21 ('prompt_max_chars')
+           1070 LOAD_CONST              22 (3000)
+           1072 CALL                     2
+           1080 STORE_FAST              15 (Lmax)
+
+ 94        1082 LOAD_GLOBAL             25 (NULL + clamp01)
+           1092 LOAD_FAST               13 (plen)
+           1094 LOAD_FAST               14 (L0)
+           1096 BINARY_OP               10 (-)
+           1100 LOAD_GLOBAL             13 (NULL + max)
+           1110 LOAD_CONST              13 (1)
+           1112 LOAD_FAST               15 (Lmax)
+           1114 LOAD_FAST               14 (L0)
+           1116 BINARY_OP               10 (-)
+           1120 CALL                     2
+           1128 BINARY_OP               11 (/)
+           1132 CALL                     1
+           1140 STORE_FAST              16 (bloat)
+
+ 95        1142 LOAD_GLOBAL             25 (NULL + clamp01)
+           1152 LOAD_FAST               12 (base)
+           1154 LOAD_FAST                2 (W)
+           1156 LOAD_ATTR                1 (NULL|self + get)
+           1176 LOAD_CONST              23 ('prompt_bloat_penalty')
+           1178 LOAD_CONST              24 (0.1)
+           1180 CALL                     2
+           1188 LOAD_FAST               16 (bloat)
+           1190 BINARY_OP                5 (*)
+           1194 BINARY_OP               10 (-)
+           1198 CALL                     1
+           1206 RETURN_VALUE
+
+Disassembly of score_quality:
+ 30           0 RESUME                   0
+
+ 31           2 LOAD_FAST                0 (per)
+              4 POP_JUMP_IF_FALSE       30 (to 66)
+              6 LOAD_GLOBAL              1 (NULL + sum)
+             16 LOAD_CONST               1 (<code object <genexpr> at 0x7f59f50204e0, file "observathon_score\dimensions.py", line 31>)
+             18 MAKE_FUNCTION            0
+             20 LOAD_FAST                0 (per)
+             22 GET_ITER
+             24 CALL                     0
+             32 CALL                     1
+             40 LOAD_GLOBAL              3 (NULL + len)
+             50 LOAD_FAST                0 (per)
+             52 CALL                     1
+             60 BINARY_OP               11 (/)
+             64 RETURN_VALUE
+        >>   66 LOAD_CONST               2 (0.0)
+             68 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x7f59f50204e0, file "observathon_score\dimensions.py", line 31>:
+ 31           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                 9 (to 30)
+             12 STORE_FAST               1 (p)
+             14 LOAD_FAST                1 (p)
+             16 LOAD_CONST               0 ('quality')
+             18 BINARY_SUBSCR
+             22 YIELD_VALUE              1
+             24 RESUME                   1
+             26 POP_TOP
+             28 JUMP_BACKWARD           11 (to 8)
+        >>   30 END_FOR
+             32 RETURN_CONST             1 (None)
+        >>   34 CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+             36 RERAISE                  1
+ExceptionTable:
+  4 to 32 -> 34 [0] lasti
+

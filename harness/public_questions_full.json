@@ -1,0 +1,1442 @@
+[
+  {
+    "qid": "pub-001",
+    "question": "Mua 4 AirPods dùng mã EXPIRED ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 4,
+      "coupon": "EXPIRED",
+      "dest": "da nang"
+    },
+    "session": "pub-001",
+    "turn": 0
+  },
+  {
+    "qid": "pub-002",
+    "question": "Mua 5 AirPods dùng mã SALE15 tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 5,
+      "coupon": "SALE15",
+      "dest": null
+    },
+    "session": "pub-002",
+    "turn": 0
+  },
+  {
+    "qid": "pub-003",
+    "question": "Mua 3 MacBook dùng mã VIP20 ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 3,
+      "coupon": "VIP20",
+      "dest": "hai phong"
+    },
+    "session": "pub-003",
+    "turn": 0
+  },
+  {
+    "qid": "pub-004",
+    "question": "Mua 5 iPad ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": null,
+      "dest": "ha noi"
+    },
+    "session": "pub-004",
+    "turn": 0
+  },
+  {
+    "qid": "pub-005",
+    "question": "Mua 5 iPad ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": null,
+      "dest": "ha noi"
+    },
+    "session": "pub-005",
+    "turn": 0
+  },
+  {
+    "qid": "pub-006",
+    "question": "Mua 5 iPad dùng mã WINNER ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "ha noi"
+    },
+    "session": "pub-006",
+    "turn": 0
+  },
+  {
+    "qid": "pub-007",
+    "question": "Mua 4 iPhone ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": null,
+      "dest": "hai phong"
+    },
+    "session": "pub-007",
+    "turn": 0
+  },
+  {
+    "qid": "pub-008",
+    "question": "Mua 4 MacBook dùng mã EXPIRED ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 4,
+      "coupon": "EXPIRED",
+      "dest": "da nang"
+    },
+    "session": "pub-008",
+    "turn": 0
+  },
+  {
+    "qid": "pub-009",
+    "question": "Mua 3 iPad ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": null,
+      "dest": "ha noi"
+    },
+    "session": "pub-009",
+    "turn": 0
+  },
+  {
+    "qid": "pub-010",
+    "question": "Mua 1 MacBook dùng mã SALE15 ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 1,
+      "coupon": "SALE15",
+      "dest": "ha noi"
+    },
+    "session": "pub-010",
+    "turn": 0
+  },
+  {
+    "qid": "pub-011",
+    "question": "Mua 4 iPhone dùng mã SALE15 ship Cần Thơ tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": "SALE15",
+      "dest": "can tho"
+    },
+    "session": "pub-011",
+    "turn": 0
+  },
+  {
+    "qid": "pub-012",
+    "question": "Mua 2 iPad dùng mã EXPIRED ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 2,
+      "coupon": "EXPIRED",
+      "dest": "hai phong"
+    },
+    "session": "pub-012",
+    "turn": 0
+  },
+  {
+    "qid": "pub-013",
+    "question": "Mua 2 iPhone ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 2,
+      "coupon": null,
+      "dest": "tp hcm"
+    },
+    "session": "pub-013",
+    "turn": 0
+  },
+  {
+    "qid": "pub-014",
+    "question": "Mua 5 iPad ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": null,
+      "dest": "ha noi"
+    },
+    "session": "pub-014",
+    "turn": 0
+  },
+  {
+    "qid": "pub-015",
+    "question": "Mua 1 iPad tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 1,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-015",
+    "turn": 0
+  },
+  {
+    "qid": "pub-016",
+    "question": "Mua 3 iPhone ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 3,
+      "coupon": null,
+      "dest": "da nang"
+    },
+    "session": "pub-016",
+    "turn": 0
+  },
+  {
+    "qid": "pub-017",
+    "question": "Mua 1 iPhone dùng mã SALE15 ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 1,
+      "coupon": "SALE15",
+      "dest": "da nang"
+    },
+    "session": "pub-017",
+    "turn": 0
+  },
+  {
+    "qid": "pub-018",
+    "question": "Mua 1 MacBook dùng mã WINNER ship Vũng Tàu tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 1,
+      "coupon": "WINNER",
+      "dest": "vung tau"
+    },
+    "session": "pub-018",
+    "turn": 0
+  },
+  {
+    "qid": "pub-019",
+    "question": "Mua 1 AirPods dùng mã WINNER ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 1,
+      "coupon": "WINNER",
+      "dest": "ha noi"
+    },
+    "session": "pub-019",
+    "turn": 0
+  },
+  {
+    "qid": "pub-020",
+    "question": "Mua 5 iPhone dùng mã WINNER ship hà nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "hà nội"
+    },
+    "session": "pub-020",
+    "turn": 0
+  },
+  {
+    "qid": "pub-021",
+    "question": "Mua 1 iPad dùng mã WINNER ship đà nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 1,
+      "coupon": "WINNER",
+      "dest": "đà nẵng"
+    },
+    "session": "pub-021",
+    "turn": 0
+  },
+  {
+    "qid": "pub-022",
+    "question": "Mua 2 AirPods dùng mã WINNER ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 2,
+      "coupon": "WINNER",
+      "dest": "ha noi"
+    },
+    "session": "pub-022",
+    "turn": 0
+  },
+  {
+    "qid": "pub-023",
+    "question": "Mua 5 iPhone dùng mã WINNER ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "tp hcm"
+    },
+    "session": "pub-023",
+    "turn": 0
+  },
+  {
+    "qid": "pub-024",
+    "question": "Mua 2 MacBook dùng mã EXPIRED ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 2,
+      "coupon": "EXPIRED",
+      "dest": "ha noi"
+    },
+    "session": "pub-024",
+    "turn": 0
+  },
+  {
+    "qid": "pub-025",
+    "question": "Mua 1 MacBook tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 1,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-025",
+    "turn": 0
+  },
+  {
+    "qid": "pub-026",
+    "question": "Mua 3 iPhone dùng mã SALE15 ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 3,
+      "coupon": "SALE15",
+      "dest": "ha noi"
+    },
+    "session": "pub-026",
+    "turn": 0
+  },
+  {
+    "qid": "pub-027",
+    "question": "Mua 5 iPhone tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-027",
+    "turn": 0
+  },
+  {
+    "qid": "pub-028",
+    "question": "Mua 5 iPhone dùng mã SALE15 ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": "SALE15",
+      "dest": "hai phong"
+    },
+    "session": "pub-028",
+    "turn": 0
+  },
+  {
+    "qid": "pub-029",
+    "question": "Mua 5 MacBook dùng mã WINNER ship hà nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "hà nội"
+    },
+    "session": "pub-029",
+    "turn": 0
+  },
+  {
+    "qid": "pub-030",
+    "question": "Mua 2 iPad tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 2,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-030",
+    "turn": 0
+  },
+  {
+    "qid": "pub-031",
+    "question": "Mua 3 iPad dùng mã SALE15 ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": "SALE15",
+      "dest": "hai phong"
+    },
+    "session": "pub-031",
+    "turn": 0
+  },
+  {
+    "qid": "pub-032",
+    "question": "Mua 3 iPhone tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 3,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-032",
+    "turn": 0
+  },
+  {
+    "qid": "pub-033",
+    "question": "Mua 1 MacBook dùng mã SALE15 ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 1,
+      "coupon": "SALE15",
+      "dest": "hai phong"
+    },
+    "session": "pub-033",
+    "turn": 0
+  },
+  {
+    "qid": "pub-034",
+    "question": "Mua 1 iPad ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 1,
+      "coupon": null,
+      "dest": "tp hcm"
+    },
+    "session": "pub-034",
+    "turn": 0
+  },
+  {
+    "qid": "pub-035",
+    "question": "Mua 3 iPad dùng mã EXPIRED ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": "EXPIRED",
+      "dest": "tp hcm"
+    },
+    "session": "pub-035",
+    "turn": 0
+  },
+  {
+    "qid": "pub-036",
+    "question": "Mua 2 MacBook dùng mã EXPIRED ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 2,
+      "coupon": "EXPIRED",
+      "dest": "da nang"
+    },
+    "session": "pub-036",
+    "turn": 0
+  },
+  {
+    "qid": "pub-037",
+    "question": "Mua 5 iPad dùng mã VIP20 ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": "VIP20",
+      "dest": "ha noi"
+    },
+    "session": "pub-037",
+    "turn": 0
+  },
+  {
+    "qid": "pub-038",
+    "question": "Mua 3 iPad dùng mã WINNER ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": "WINNER",
+      "dest": "da nang"
+    },
+    "session": "pub-038",
+    "turn": 0
+  },
+  {
+    "qid": "pub-039",
+    "question": "Mua 1 iPad dùng mã VIP20 ship đà nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 1,
+      "coupon": "VIP20",
+      "dest": "đà nẵng"
+    },
+    "session": "pub-039",
+    "turn": 0
+  },
+  {
+    "qid": "pub-040",
+    "question": "Mua 5 oppo dùng mã SALE15 ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "oppo",
+      "qty": 5,
+      "coupon": "SALE15",
+      "dest": "da nang"
+    },
+    "session": "pub-040",
+    "turn": 0
+  },
+  {
+    "qid": "pub-041",
+    "question": "Mua 5 MacBook dùng mã VIP20 ship đà nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 5,
+      "coupon": "VIP20",
+      "dest": "đà nẵng"
+    },
+    "session": "pub-041",
+    "turn": 0
+  },
+  {
+    "qid": "pub-042",
+    "question": "Mua 5 iPhone dùng mã VIP20 ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": "VIP20",
+      "dest": "tp hcm"
+    },
+    "session": "pub-042",
+    "turn": 0
+  },
+  {
+    "qid": "pub-043",
+    "question": "Mua 2 iPad dùng mã SALE15 ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 2,
+      "coupon": "SALE15",
+      "dest": "tp hcm"
+    },
+    "session": "pub-043",
+    "turn": 0
+  },
+  {
+    "qid": "pub-044",
+    "question": "Mua 5 iPad tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-044",
+    "turn": 0
+  },
+  {
+    "qid": "pub-045",
+    "question": "Mua 1 MacBook dùng mã WINNER ship Vũng Tàu tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 1,
+      "coupon": "WINNER",
+      "dest": "vung tau"
+    },
+    "session": "pub-045",
+    "turn": 0
+  },
+  {
+    "qid": "pub-046",
+    "question": "Mua 5 iPad dùng mã SALE15 ship hà nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": "SALE15",
+      "dest": "hà nội"
+    },
+    "session": "pub-046",
+    "turn": 0
+  },
+  {
+    "qid": "pub-047",
+    "question": "Mua 2 MacBook ship Cần Thơ tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 2,
+      "coupon": null,
+      "dest": "can tho"
+    },
+    "session": "pub-047",
+    "turn": 0
+  },
+  {
+    "qid": "pub-048",
+    "question": "Mua 3 sony dùng mã VIP20 ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "sony",
+      "qty": 3,
+      "coupon": "VIP20",
+      "dest": "ha noi"
+    },
+    "session": "pub-048",
+    "turn": 0
+  },
+  {
+    "qid": "pub-049",
+    "question": "Mua 5 MacBook dùng mã WINNER ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "tp hcm"
+    },
+    "session": "pub-049",
+    "turn": 0
+  },
+  {
+    "qid": "pub-050",
+    "question": "Mua 1 MacBook ship đà nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 1,
+      "coupon": null,
+      "dest": "đà nẵng"
+    },
+    "session": "pub-050",
+    "turn": 0
+  },
+  {
+    "qid": "pub-051",
+    "question": "Mua 4 iPad dùng mã SALE15 ship hải phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 4,
+      "coupon": "SALE15",
+      "dest": "hải phòng"
+    },
+    "session": "pub-051",
+    "turn": 0
+  },
+  {
+    "qid": "pub-052",
+    "question": "Mua 5 oppo dùng mã VIP20 ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "oppo",
+      "qty": 5,
+      "coupon": "VIP20",
+      "dest": "tp hcm"
+    },
+    "session": "pub-052",
+    "turn": 0
+  },
+  {
+    "qid": "pub-053",
+    "question": "Mua 2 iPhone dùng mã WINNER ship đà nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 2,
+      "coupon": "WINNER",
+      "dest": "đà nẵng"
+    },
+    "session": "pub-053",
+    "turn": 0
+  },
+  {
+    "qid": "pub-054",
+    "question": "Mua 5 iPhone dùng mã WINNER ship hải phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "hải phòng"
+    },
+    "session": "pub-054",
+    "turn": 0
+  },
+  {
+    "qid": "pub-055",
+    "question": "Mua 1 sony ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "sony",
+      "qty": 1,
+      "coupon": null,
+      "dest": "ha noi"
+    },
+    "session": "pub-055",
+    "turn": 0
+  },
+  {
+    "qid": "pub-056",
+    "question": "Mua 2 MacBook tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 2,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-056",
+    "turn": 0
+  },
+  {
+    "qid": "pub-057",
+    "question": "Mua 4 iPad ship Vũng Tàu tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 4,
+      "coupon": null,
+      "dest": "vung tau"
+    },
+    "session": "pub-057",
+    "turn": 0
+  },
+  {
+    "qid": "pub-058",
+    "question": "Mua 2 MacBook dùng mã WINNER ship đà nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 2,
+      "coupon": "WINNER",
+      "dest": "đà nẵng"
+    },
+    "session": "pub-058",
+    "turn": 0
+  },
+  {
+    "qid": "pub-059",
+    "question": "Mua 4 MacBook dùng mã WINNER ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 4,
+      "coupon": "WINNER",
+      "dest": "da nang"
+    },
+    "session": "pub-059",
+    "turn": 0
+  },
+  {
+    "qid": "pub-060",
+    "question": "Mua 3 iPad dùng mã EXPIRED ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": "EXPIRED",
+      "dest": "ha noi"
+    },
+    "session": "pub-060",
+    "turn": 0
+  },
+  {
+    "qid": "pub-061",
+    "question": "Mua 4 iPhone dùng mã VIP20 ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": "VIP20",
+      "dest": "tp hcm"
+    },
+    "session": "pub-061",
+    "turn": 0
+  },
+  {
+    "qid": "pub-062",
+    "question": "Mua 4 MacBook dùng mã WINNER ship hà nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 4,
+      "coupon": "WINNER",
+      "dest": "hà nội"
+    },
+    "session": "pub-062",
+    "turn": 0
+  },
+  {
+    "qid": "pub-063",
+    "question": "Mua 2 iPhone dùng mã WINNER ship đà nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 2,
+      "coupon": "WINNER",
+      "dest": "đà nẵng"
+    },
+    "session": "pub-063",
+    "turn": 0
+  },
+  {
+    "qid": "pub-064",
+    "question": "Mua 5 MacBook dùng mã SALE15 ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 5,
+      "coupon": "SALE15",
+      "dest": "da nang"
+    },
+    "session": "pub-064",
+    "turn": 0
+  },
+  {
+    "qid": "pub-065",
+    "question": "Mua 5 iPhone tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-065",
+    "turn": 0
+  },
+  {
+    "qid": "pub-066",
+    "question": "Mua 4 iPhone dùng mã EXPIRED ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": "EXPIRED",
+      "dest": "da nang"
+    },
+    "session": "pub-066",
+    "turn": 0
+  },
+  {
+    "qid": "pub-067",
+    "question": "Mua 1 iPhone ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 1,
+      "coupon": null,
+      "dest": "da nang"
+    },
+    "session": "pub-067",
+    "turn": 0
+  },
+  {
+    "qid": "pub-068",
+    "question": "Mua 5 MacBook dùng mã WINNER ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "ha noi"
+    },
+    "session": "pub-068",
+    "turn": 0
+  },
+  {
+    "qid": "pub-069",
+    "question": "Mua 5 iPhone dùng mã VIP20 ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": "VIP20",
+      "dest": "da nang"
+    },
+    "session": "pub-069",
+    "turn": 0
+  },
+  {
+    "qid": "pub-070",
+    "question": "Mua 4 iPhone tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-070",
+    "turn": 0
+  },
+  {
+    "qid": "pub-071",
+    "question": "Mua 2 iPad dùng mã VIP20 ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 2,
+      "coupon": "VIP20",
+      "dest": "tp hcm"
+    },
+    "session": "pub-071",
+    "turn": 0
+  },
+  {
+    "qid": "pub-072",
+    "question": "Mua 3 MacBook dùng mã SALE15 ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 3,
+      "coupon": "SALE15",
+      "dest": "tp hcm"
+    },
+    "session": "pub-072",
+    "turn": 0
+  },
+  {
+    "qid": "pub-073",
+    "question": "Mua 1 iPhone dùng mã WINNER ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 1,
+      "coupon": "WINNER",
+      "dest": "tp hcm"
+    },
+    "session": "pub-073",
+    "turn": 0
+  },
+  {
+    "qid": "pub-074",
+    "question": "Mua 5 iPad dùng mã EXPIRED ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": "EXPIRED",
+      "dest": "ha noi"
+    },
+    "session": "pub-074",
+    "turn": 0
+  },
+  {
+    "qid": "pub-075",
+    "question": "Mua 4 iPad dùng mã VIP20 ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 4,
+      "coupon": "VIP20",
+      "dest": "ha noi"
+    },
+    "session": "pub-075",
+    "turn": 0
+  },
+  {
+    "qid": "pub-076",
+    "question": "Mua 3 AirPods dùng mã SALE15 ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 3,
+      "coupon": "SALE15",
+      "dest": "hai phong"
+    },
+    "session": "pub-076",
+    "turn": 0
+  },
+  {
+    "qid": "pub-077",
+    "question": "Mua 4 iPhone dùng mã WINNER ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": "WINNER",
+      "dest": "hai phong"
+    },
+    "session": "pub-077",
+    "turn": 0
+  },
+  {
+    "qid": "pub-078",
+    "question": "Mua 5 iPad dùng mã EXPIRED ship hà nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": "EXPIRED",
+      "dest": "hà nội"
+    },
+    "session": "pub-078",
+    "turn": 0
+  },
+  {
+    "qid": "pub-079",
+    "question": "Mua 4 iPad dùng mã WINNER ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 4,
+      "coupon": "WINNER",
+      "dest": "hai phong"
+    },
+    "session": "pub-079",
+    "turn": 0
+  },
+  {
+    "qid": "pub-080",
+    "question": "Mua 5 iPad dùng mã WINNER ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "tp hcm"
+    },
+    "session": "pub-080",
+    "turn": 0
+  },
+  {
+    "qid": "pub-081",
+    "question": "Mua 3 iPhone dùng mã VIP20 ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 3,
+      "coupon": "VIP20",
+      "dest": "da nang"
+    },
+    "session": "pub-081",
+    "turn": 0
+  },
+  {
+    "qid": "pub-082",
+    "question": "Mua 1 sony dùng mã SALE15 tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "sony",
+      "qty": 1,
+      "coupon": "SALE15",
+      "dest": null
+    },
+    "session": "pub-082",
+    "turn": 0
+  },
+  {
+    "qid": "pub-083",
+    "question": "Mua 1 iPad dùng mã VIP20 ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 1,
+      "coupon": "VIP20",
+      "dest": "hai phong"
+    },
+    "session": "pub-083",
+    "turn": 0
+  },
+  {
+    "qid": "pub-084",
+    "question": "Mua 2 AirPods dùng mã SALE15 ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 2,
+      "coupon": "SALE15",
+      "dest": "tp hcm"
+    },
+    "session": "pub-084",
+    "turn": 0
+  },
+  {
+    "qid": "pub-085",
+    "question": "Mua 4 MacBook dùng mã EXPIRED ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 4,
+      "coupon": "EXPIRED",
+      "dest": "ha noi"
+    },
+    "session": "pub-085",
+    "turn": 0
+  },
+  {
+    "qid": "pub-086",
+    "question": "Mua 4 MacBook ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 4,
+      "coupon": null,
+      "dest": "hai phong"
+    },
+    "session": "pub-086",
+    "turn": 0
+  },
+  {
+    "qid": "pub-087",
+    "question": "Mua 5 AirPods dùng mã WINNER tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": null
+    },
+    "session": "pub-087",
+    "turn": 0
+  },
+  {
+    "qid": "pub-088",
+    "question": "Mua 3 iPad dùng mã SALE15 ship hải phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": "SALE15",
+      "dest": "hải phòng"
+    },
+    "session": "pub-088",
+    "turn": 0
+  },
+  {
+    "qid": "pub-089",
+    "question": "Mua 5 nokia ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "nokia",
+      "qty": 5,
+      "coupon": null,
+      "dest": "da nang"
+    },
+    "session": "pub-089",
+    "turn": 0
+  },
+  {
+    "qid": "pub-090",
+    "question": "Mua 5 iPad dùng mã WINNER ship đà lạt tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 5,
+      "coupon": "WINNER",
+      "dest": "đà lạt"
+    },
+    "session": "pub-090",
+    "turn": 0
+  },
+  {
+    "qid": "pub-091",
+    "question": "Mua 4 iPhone tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-091",
+    "turn": 0
+  },
+  {
+    "qid": "pub-092",
+    "question": "Mua 4 iPad ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 4,
+      "coupon": null,
+      "dest": "hai phong"
+    },
+    "session": "pub-092",
+    "turn": 0
+  },
+  {
+    "qid": "pub-093",
+    "question": "Mua 3 MacBook dùng mã EXPIRED ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 3,
+      "coupon": "EXPIRED",
+      "dest": "hai phong"
+    },
+    "session": "pub-093",
+    "turn": 0
+  },
+  {
+    "qid": "pub-094",
+    "question": "Mua 4 iPhone dùng mã WINNER ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": "WINNER",
+      "dest": "tp hcm"
+    },
+    "session": "pub-094",
+    "turn": 0
+  },
+  {
+    "qid": "pub-095",
+    "question": "Mua 5 MacBook dùng mã EXPIRED ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 5,
+      "coupon": "EXPIRED",
+      "dest": "ha noi"
+    },
+    "session": "pub-095",
+    "turn": 0
+  },
+  {
+    "qid": "pub-096",
+    "question": "Mua 4 iPad dùng mã VIP20 ship hà nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 4,
+      "coupon": "VIP20",
+      "dest": "hà nội"
+    },
+    "session": "pub-096",
+    "turn": 0
+  },
+  {
+    "qid": "pub-097",
+    "question": "Mua 2 MacBook dùng mã VIP20 ship đà lạt tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 2,
+      "coupon": "VIP20",
+      "dest": "đà lạt"
+    },
+    "session": "pub-097",
+    "turn": 0
+  },
+  {
+    "qid": "pub-098",
+    "question": "Mua 2 iPad dùng mã SALE15 ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 2,
+      "coupon": "SALE15",
+      "dest": "da nang"
+    },
+    "session": "pub-098",
+    "turn": 0
+  },
+  {
+    "qid": "pub-099",
+    "question": "Mua 4 iPhone dùng mã WINNER ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": "WINNER",
+      "dest": "hai phong"
+    },
+    "session": "pub-099",
+    "turn": 0
+  },
+  {
+    "qid": "pub-100",
+    "question": "Mua 5 iPhone tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 5,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-100",
+    "turn": 0
+  },
+  {
+    "qid": "pub-101",
+    "question": "Mua 1 iPad dùng mã VIP20 ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 1,
+      "coupon": "VIP20",
+      "dest": "hai phong"
+    },
+    "session": "pub-101",
+    "turn": 0
+  },
+  {
+    "qid": "pub-102",
+    "question": "Mua 3 iPad dùng mã SALE15 ship hải phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": "SALE15",
+      "dest": "hải phòng"
+    },
+    "session": "pub-102",
+    "turn": 0
+  },
+  {
+    "qid": "pub-103",
+    "question": "Mua 5 MacBook dùng mã SALE15 ship Vũng Tàu tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 5,
+      "coupon": "SALE15",
+      "dest": "vung tau"
+    },
+    "session": "pub-103",
+    "turn": 0
+  },
+  {
+    "qid": "pub-104",
+    "question": "Mua 2 AirPods ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 2,
+      "coupon": null,
+      "dest": "tp hcm"
+    },
+    "session": "pub-104",
+    "turn": 0
+  },
+  {
+    "qid": "pub-105",
+    "question": "Mua 3 AirPods dùng mã EXPIRED tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 3,
+      "coupon": "EXPIRED",
+      "dest": null
+    },
+    "session": "pub-105",
+    "turn": 0
+  },
+  {
+    "qid": "pub-106",
+    "question": "Mua 4 AirPods dùng mã WINNER ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "airpods",
+      "qty": 4,
+      "coupon": "WINNER",
+      "dest": "hai phong"
+    },
+    "session": "pub-106",
+    "turn": 0
+  },
+  {
+    "qid": "pub-107",
+    "question": "Mua 1 MacBook dùng mã VIP20 ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 1,
+      "coupon": "VIP20",
+      "dest": "ha noi"
+    },
+    "session": "pub-107",
+    "turn": 0
+  },
+  {
+    "qid": "pub-108",
+    "question": "Mua 4 MacBook dùng mã SALE15 ship đà lạt tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 4,
+      "coupon": "SALE15",
+      "dest": "đà lạt"
+    },
+    "session": "pub-108",
+    "turn": 0
+  },
+  {
+    "qid": "pub-109",
+    "question": "Mua 3 iPad ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": null,
+      "dest": "hai phong"
+    },
+    "session": "pub-109",
+    "turn": 0
+  },
+  {
+    "qid": "pub-110",
+    "question": "Mua 4 Xiaomi ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "xiaomi",
+      "qty": 4,
+      "coupon": null,
+      "dest": "tp hcm"
+    },
+    "session": "pub-110",
+    "turn": 0
+  },
+  {
+    "qid": "pub-111",
+    "question": "Mua 4 iPad dùng mã VIP20 ship Đà Nẵng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 4,
+      "coupon": "VIP20",
+      "dest": "da nang"
+    },
+    "session": "pub-111",
+    "turn": 0
+  },
+  {
+    "qid": "pub-112",
+    "question": "Mua 3 iPad ship hà nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": null,
+      "dest": "hà nội"
+    },
+    "session": "pub-112",
+    "turn": 0
+  },
+  {
+    "qid": "pub-113",
+    "question": "Mua 2 iPad dùng mã WINNER ship Hà Nội tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 2,
+      "coupon": "WINNER",
+      "dest": "ha noi"
+    },
+    "session": "pub-113",
+    "turn": 0
+  },
+  {
+    "qid": "pub-114",
+    "question": "Mua 3 iPhone dùng mã VIP20 ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 3,
+      "coupon": "VIP20",
+      "dest": "tp hcm"
+    },
+    "session": "pub-114",
+    "turn": 0
+  },
+  {
+    "qid": "pub-115",
+    "question": "Mua 3 iPad dùng mã EXPIRED ship Vũng Tàu tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": "EXPIRED",
+      "dest": "vung tau"
+    },
+    "session": "pub-115",
+    "turn": 0
+  },
+  {
+    "qid": "pub-116",
+    "question": "Mua 4 oppo ship TP HCM tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "oppo",
+      "qty": 4,
+      "coupon": null,
+      "dest": "tp hcm"
+    },
+    "session": "pub-116",
+    "turn": 0
+  },
+  {
+    "qid": "pub-117",
+    "question": "Mua 4 MacBook dùng mã WINNER ship Hải Phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 4,
+      "coupon": "WINNER",
+      "dest": "hai phong"
+    },
+    "session": "pub-117",
+    "turn": 0
+  },
+  {
+    "qid": "pub-118",
+    "question": "Mua 3 iPad tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "ipad",
+      "qty": 3,
+      "coupon": null,
+      "dest": null
+    },
+    "session": "pub-118",
+    "turn": 0
+  },
+  {
+    "qid": "pub-119",
+    "question": "Mua 4 iPhone dùng mã VIP20 ship hải phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "iphone",
+      "qty": 4,
+      "coupon": "VIP20",
+      "dest": "hải phòng"
+    },
+    "session": "pub-119",
+    "turn": 0
+  },
+  {
+    "qid": "pub-120",
+    "question": "Mua 3 MacBook dùng mã WINNER ship hải phòng tổng cộng bao nhiêu VND?",
+    "spec": {
+      "item": "macbook",
+      "qty": 3,
+      "coupon": "WINNER",
+      "dest": "hải phòng"
+    },
+    "session": "pub-120",
+    "turn": 0
+  }
+]

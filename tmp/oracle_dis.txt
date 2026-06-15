@@ -1,0 +1,509 @@
+Disassembly of _ascii:
+ 24           0 RESUME                   0
+
+ 25           2 LOAD_FAST                0 (s)
+              4 COPY                     1
+              6 POP_JUMP_IF_TRUE         2 (to 12)
+              8 POP_TOP
+             10 LOAD_CONST               1 ('')
+        >>   12 LOAD_ATTR                1 (NULL|self + strip)
+             32 CALL                     0
+             40 LOAD_ATTR                3 (NULL|self + lower)
+             60 CALL                     0
+             68 LOAD_ATTR                5 (NULL|self + replace)
+             88 LOAD_CONST               2 ('đ')
+             90 LOAD_CONST               3 ('d')
+             92 CALL                     2
+            100 STORE_FAST               0 (s)
+
+ 26         102 LOAD_CONST               1 ('')
+            104 LOAD_ATTR                7 (NULL|self + join)
+            124 LOAD_CONST               4 (<code object <genexpr> at 0x7443b791b220, file "observathon_score\oracle.py", line 26>)
+            126 MAKE_FUNCTION            0
+            128 LOAD_GLOBAL              9 (NULL + unicodedata)
+            138 LOAD_ATTR               10 (normalize)
+            158 LOAD_CONST               5 ('NFKD')
+            160 LOAD_FAST                0 (s)
+            162 CALL                     2
+            170 GET_ITER
+            172 CALL                     0
+            180 CALL                     1
+            188 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x7443b791b220, file "observathon_score\oracle.py", line 26>:
+ 26           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                28 (to 68)
+             12 STORE_FAST               1 (c)
+             14 LOAD_GLOBAL              1 (NULL + unicodedata)
+             24 LOAD_ATTR                2 (combining)
+             44 LOAD_FAST                1 (c)
+             46 CALL                     1
+             54 POP_JUMP_IF_FALSE        1 (to 58)
+             56 JUMP_BACKWARD           25 (to 8)
+        >>   58 LOAD_FAST                1 (c)
+             60 YIELD_VALUE              1
+             62 RESUME                   1
+             64 POP_TOP
+             66 JUMP_BACKWARD           30 (to 8)
+        >>   68 END_FOR
+             70 RETURN_CONST             0 (None)
+        >>   72 CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+             74 RERAISE                  1
+ExceptionTable:
+  4 to 54 -> 72 [0] lasti
+  58 to 70 -> 72 [0] lasti
+
+Disassembly of _s:
+ 56           0 RESUME                   0
+
+ 59           2 LOAD_GLOBAL              1 (NULL + isinstance)
+             12 LOAD_FAST                0 (x)
+             14 LOAD_GLOBAL              2 (str)
+             24 CALL                     2
+             32 POP_JUMP_IF_FALSE        2 (to 38)
+             34 LOAD_FAST                0 (x)
+             36 RETURN_VALUE
+        >>   38 LOAD_FAST                0 (x)
+             40 POP_JUMP_IF_NOT_NONE     2 (to 46)
+             42 LOAD_CONST               1 ('')
+             44 RETURN_VALUE
+        >>   46 LOAD_GLOBAL              3 (NULL + str)
+             56 LOAD_FAST                0 (x)
+             58 CALL                     1
+             66 RETURN_VALUE
+
+Disassembly of compute_expected:
+ 29           0 RESUME                   0
+
+ 30           2 LOAD_GLOBAL              1 (NULL + _ascii)
+             12 LOAD_FAST                0 (spec)
+             14 LOAD_ATTR                3 (NULL|self + get)
+             34 LOAD_CONST               1 ('item')
+             36 LOAD_CONST               2 ('')
+             38 CALL                     2
+             46 CALL                     1
+             54 STORE_FAST               1 (item)
+             56 LOAD_GLOBAL              5 (NULL + int)
+             66 LOAD_FAST                0 (spec)
+             68 LOAD_ATTR                3 (NULL|self + get)
+             88 LOAD_CONST               3 ('qty')
+             90 LOAD_CONST               4 (1)
+             92 CALL                     2
+            100 COPY                     1
+            102 POP_JUMP_IF_TRUE         2 (to 108)
+            104 POP_TOP
+            106 LOAD_CONST               4 (1)
+        >>  108 CALL                     1
+            116 STORE_FAST               2 (qty)
+
+ 31         118 LOAD_FAST                0 (spec)
+            120 LOAD_ATTR                3 (NULL|self + get)
+            140 LOAD_CONST               5 ('coupon')
+            142 CALL                     1
+            150 STORE_FAST               3 (coupon)
+            152 LOAD_FAST                0 (spec)
+            154 LOAD_ATTR                3 (NULL|self + get)
+            174 LOAD_CONST               6 ('dest')
+            176 CALL                     1
+            184 STORE_FAST               4 (dest)
+
+ 32         186 LOAD_GLOBAL              6 (_CATALOG)
+            196 LOAD_ATTR                3 (NULL|self + get)
+            216 LOAD_FAST                1 (item)
+            218 CALL                     1
+            226 STORE_FAST               5 (rec)
+
+ 33         228 LOAD_FAST                5 (rec)
+            230 POP_JUMP_IF_NOT_NONE     8 (to 248)
+
+ 34         232 LOAD_CONST               7 ('item_not_found')
+            234 LOAD_CONST               0 (None)
+            236 LOAD_CONST               8 ('refusal')
+            238 LOAD_CONST               9 ('check_stock')
+            240 BUILD_LIST               1
+            242 LOAD_CONST              10 (('status', 'total_vnd', 'answer_kind', 'tools'))
+            244 BUILD_CONST_KEY_MAP      4
+            246 RETURN_VALUE
+
+ 35     >>  248 LOAD_FAST                5 (rec)
+            250 LOAD_CONST              11 ('in_stock')
+            252 BINARY_SUBSCR
+            256 POP_JUMP_IF_TRUE        12 (to 282)
+
+ 36         258 LOAD_CONST              12 ('out_of_stock')
+            260 LOAD_CONST               0 (None)
+            262 LOAD_CONST               8 ('refusal')
+            264 LOAD_CONST               9 ('check_stock')
+            266 BUILD_LIST               1
+
+ 37         268 LOAD_FAST                5 (rec)
+            270 LOAD_CONST              13 ('unit_price_vnd')
+            272 BINARY_SUBSCR
+
+ 36         276 LOAD_CONST              14 (('status', 'total_vnd', 'answer_kind', 'tools', 'unit_price_vnd'))
+            278 BUILD_CONST_KEY_MAP      5
+            280 RETURN_VALUE
+
+ 38     >>  282 LOAD_FAST                4 (dest)
+            284 POP_JUMP_IF_TRUE        14 (to 314)
+            286 LOAD_FAST                3 (coupon)
+            288 POP_JUMP_IF_TRUE        12 (to 314)
+
+ 39         290 LOAD_CONST              15 ('ok')
+            292 LOAD_CONST               0 (None)
+            294 LOAD_CONST              16 ('stock_only')
+            296 LOAD_CONST               9 ('check_stock')
+            298 BUILD_LIST               1
+
+ 40         300 LOAD_FAST                5 (rec)
+            302 LOAD_CONST              13 ('unit_price_vnd')
+            304 BINARY_SUBSCR
+
+ 39         308 LOAD_CONST              14 (('status', 'total_vnd', 'answer_kind', 'tools', 'unit_price_vnd'))
+            310 BUILD_CONST_KEY_MAP      5
+            312 RETURN_VALUE
+
+ 41     >>  314 LOAD_FAST                3 (coupon)
+            316 POP_JUMP_IF_FALSE       40 (to 398)
+            318 LOAD_GLOBAL              8 (_COUPONS)
+            328 LOAD_ATTR                3 (NULL|self + get)
+            348 LOAD_FAST                3 (coupon)
+            350 COPY                     1
+            352 POP_JUMP_IF_TRUE         2 (to 358)
+            354 POP_TOP
+            356 LOAD_CONST               2 ('')
+        >>  358 LOAD_ATTR               11 (NULL|self + upper)
+            378 CALL                     0
+            386 LOAD_CONST              17 (0)
+            388 CALL                     2
+            396 JUMP_FORWARD             1 (to 400)
+        >>  398 LOAD_CONST              17 (0)
+        >>  400 STORE_FAST               6 (pct)
+
+ 42         402 LOAD_CONST               0 (None)
+            404 STORE_FAST               7 (ship)
+
+ 43         406 LOAD_FAST                4 (dest)
+            408 POP_JUMP_IF_FALSE       88 (to 586)
+
+ 44         410 LOAD_GLOBAL             12 (_SHIP)
+            420 LOAD_ATTR                3 (NULL|self + get)
+            440 LOAD_GLOBAL              1 (NULL + _ascii)
+            450 LOAD_FAST                4 (dest)
+            452 CALL                     1
+            460 CALL                     1
+            468 STORE_FAST               8 (base)
+
+ 45         470 LOAD_FAST                8 (base)
+            472 POP_JUMP_IF_NOT_NONE    20 (to 514)
+
+ 46         474 LOAD_CONST              18 ('dest_not_served')
+            476 LOAD_CONST               0 (None)
+            478 LOAD_CONST               8 ('refusal')
+
+ 47         480 LOAD_CONST               9 ('check_stock')
+            482 BUILD_LIST               1
+            484 LOAD_FAST                3 (coupon)
+            486 POP_JUMP_IF_FALSE        3 (to 494)
+            488 LOAD_CONST              19 ('get_discount')
+            490 BUILD_LIST               1
+            492 JUMP_FORWARD             1 (to 496)
+        >>  494 BUILD_LIST               0
+        >>  496 BINARY_OP                0 (+)
+            500 LOAD_CONST              20 ('calc_shipping')
+            502 BUILD_LIST               1
+            504 BINARY_OP                0 (+)
+
+ 46         508 LOAD_CONST              10 (('status', 'total_vnd', 'answer_kind', 'tools'))
+            510 BUILD_CONST_KEY_MAP      4
+            512 RETURN_VALUE
+
+ 48     >>  514 LOAD_GLOBAL              5 (NULL + int)
+            524 LOAD_FAST                8 (base)
+            526 LOAD_GLOBAL             15 (NULL + max)
+            536 LOAD_CONST              21 (0.0)
+            538 LOAD_FAST                5 (rec)
+            540 LOAD_CONST              22 ('weight_kg')
+            542 BINARY_SUBSCR
+            546 LOAD_FAST                2 (qty)
+            548 BINARY_OP                5 (*)
+            552 LOAD_CONST              23 (1.0)
+            554 BINARY_OP               10 (-)
+            558 CALL                     2
+            566 LOAD_CONST              24 (5000)
+            568 BINARY_OP                5 (*)
+            572 BINARY_OP                0 (+)
+            576 CALL                     1
+            584 STORE_FAST               7 (ship)
+
+ 49     >>  586 LOAD_FAST                5 (rec)
+            588 LOAD_CONST              13 ('unit_price_vnd')
+            590 BINARY_SUBSCR
+            594 LOAD_FAST                2 (qty)
+            596 BINARY_OP                5 (*)
+            600 STORE_FAST               9 (subtotal)
+
+ 50         602 LOAD_FAST                9 (subtotal)
+            604 LOAD_CONST              25 (100)
+            606 LOAD_FAST                6 (pct)
+            608 BINARY_OP               10 (-)
+            612 BINARY_OP                5 (*)
+            616 LOAD_CONST              25 (100)
+            618 BINARY_OP                2 (//)
+            622 LOAD_FAST                7 (ship)
+            624 COPY                     1
+            626 POP_JUMP_IF_TRUE         2 (to 632)
+            628 POP_TOP
+            630 LOAD_CONST              17 (0)
+        >>  632 BINARY_OP                0 (+)
+            636 STORE_FAST              10 (total)
+
+ 51         638 LOAD_CONST               9 ('check_stock')
+            640 BUILD_LIST               1
+            642 LOAD_FAST                3 (coupon)
+            644 POP_JUMP_IF_FALSE        3 (to 652)
+            646 LOAD_CONST              19 ('get_discount')
+            648 BUILD_LIST               1
+            650 JUMP_FORWARD             1 (to 654)
+        >>  652 BUILD_LIST               0
+        >>  654 BINARY_OP                0 (+)
+            658 LOAD_FAST                4 (dest)
+            660 POP_JUMP_IF_FALSE        3 (to 668)
+            662 LOAD_CONST              20 ('calc_shipping')
+            664 BUILD_LIST               1
+            666 JUMP_FORWARD             1 (to 670)
+        >>  668 BUILD_LIST               0
+        >>  670 BINARY_OP                0 (+)
+            674 STORE_FAST              11 (tools)
+
+ 52         676 LOAD_CONST              15 ('ok')
+            678 LOAD_FAST               10 (total)
+            680 LOAD_CONST              26 ('purchase_total')
+
+ 53         682 LOAD_FAST                6 (pct)
+            684 LOAD_FAST                7 (ship)
+            686 LOAD_FAST                5 (rec)
+            688 LOAD_CONST              13 ('unit_price_vnd')
+            690 BINARY_SUBSCR
+            694 LOAD_FAST               11 (tools)
+
+ 52         696 LOAD_CONST              27 (('status', 'total_vnd', 'answer_kind', 'discount_pct', 'ship_vnd', 'unit_price_vnd', 'tools'))
+            698 BUILD_CONST_KEY_MAP      7
+            700 RETURN_VALUE
+
+Disassembly of correctness_hit:
+              0 MAKE_CELL                8 (low)
+
+ 86           2 RESUME                   0
+
+ 88           4 LOAD_GLOBAL              1 (NULL + _s)
+             14 LOAD_FAST                0 (answer)
+             16 CALL                     1
+             24 STORE_FAST               3 (a)
+
+ 89          26 LOAD_FAST                1 (status)
+             28 LOAD_CONST               1 (('loop', 'max_steps', 'no_action', 'wrapper_error'))
+             30 CONTAINS_OP              0
+             32 POP_JUMP_IF_FALSE        1 (to 36)
+
+ 90          34 RETURN_CONST             2 (0.0)
+
+ 91     >>   36 LOAD_FAST                2 (exp)
+             38 LOAD_CONST               3 ('answer_kind')
+             40 BINARY_SUBSCR
+             44 STORE_FAST               4 (kind)
+
+ 92          46 LOAD_FAST                4 (kind)
+             48 LOAD_CONST               4 ('purchase_total')
+             50 COMPARE_OP              40 (==)
+             54 POP_JUMP_IF_FALSE       21 (to 98)
+
+ 93          56 LOAD_GLOBAL              3 (NULL + extract_total_vnd)
+             66 LOAD_FAST                3 (a)
+             68 CALL                     1
+             76 LOAD_FAST                2 (exp)
+             78 LOAD_CONST               5 ('total_vnd')
+             80 BINARY_SUBSCR
+             84 COMPARE_OP              40 (==)
+             88 POP_JUMP_IF_FALSE        2 (to 94)
+             90 LOAD_CONST               6 (1.0)
+             92 RETURN_VALUE
+        >>   94 LOAD_CONST               2 (0.0)
+             96 RETURN_VALUE
+
+ 94     >>   98 LOAD_FAST                4 (kind)
+            100 LOAD_CONST               7 ('refusal')
+            102 COMPARE_OP              40 (==)
+            106 POP_JUMP_IF_FALSE       78 (to 264)
+
+ 95         108 LOAD_GLOBAL              4 (_REFUSAL_KEYS)
+            118 LOAD_ATTR                7 (NULL|self + get)
+            138 LOAD_FAST                2 (exp)
+            140 LOAD_CONST               8 ('status')
+            142 BINARY_SUBSCR
+            146 BUILD_LIST               0
+            148 CALL                     2
+            156 STORE_FAST               5 (keys)
+
+ 96         158 LOAD_GLOBAL              9 (NULL + _ascii)
+            168 LOAD_FAST                3 (a)
+            170 CALL                     1
+            178 STORE_DEREF              8 (low)
+
+ 97         180 LOAD_GLOBAL             11 (NULL + any)
+            190 LOAD_CLOSURE             8 (low)
+            192 BUILD_TUPLE              1
+            194 LOAD_CONST               9 (<code object <genexpr> at 0x7443b78daa30, file "observathon_score\oracle.py", line 97>)
+            196 MAKE_FUNCTION            8 (closure)
+            198 LOAD_FAST                5 (keys)
+            200 GET_ITER
+            202 CALL                     0
+            210 CALL                     1
+            218 STORE_FAST               6 (signaled)
+
+ 98         220 LOAD_GLOBAL              3 (NULL + extract_total_vnd)
+            230 LOAD_FAST                3 (a)
+            232 CALL                     1
+            240 LOAD_CONST              10 (None)
+            242 IS_OP                    1
+            244 STORE_FAST               7 (fabricated)
+
+ 99         246 LOAD_FAST                7 (fabricated)
+            248 POP_JUMP_IF_FALSE        1 (to 252)
+
+100         250 RETURN_CONST             2 (0.0)
+
+101     >>  252 LOAD_FAST                6 (signaled)
+            254 POP_JUMP_IF_FALSE        2 (to 260)
+            256 LOAD_CONST               6 (1.0)
+            258 RETURN_VALUE
+        >>  260 LOAD_CONST              11 (0.6)
+            262 RETURN_VALUE
+
+102     >>  264 LOAD_FAST                4 (kind)
+            266 LOAD_CONST              12 ('stock_only')
+            268 COMPARE_OP              40 (==)
+            272 POP_JUMP_IF_FALSE       23 (to 320)
+
+103         274 LOAD_GLOBAL              9 (NULL + _ascii)
+            284 LOAD_FAST                3 (a)
+            286 CALL                     1
+            294 STORE_DEREF              8 (low)
+
+104         296 LOAD_CONST              13 ('con hang')
+            298 LOAD_DEREF               8 (low)
+            300 CONTAINS_OP              0
+            302 POP_JUMP_IF_TRUE         4 (to 312)
+            304 LOAD_CONST              14 ('vnd')
+            306 LOAD_DEREF               8 (low)
+            308 CONTAINS_OP              0
+            310 POP_JUMP_IF_FALSE        2 (to 316)
+        >>  312 LOAD_CONST               6 (1.0)
+            314 RETURN_VALUE
+        >>  316 LOAD_CONST              15 (0.5)
+            318 RETURN_VALUE
+
+105     >>  320 RETURN_CONST             2 (0.0)
+
+Disassembly of <code object <genexpr> at 0x7443b78daa30, file "observathon_score\oracle.py", line 97>:
+              0 COPY_FREE_VARS           1
+
+ 97           2 RETURN_GENERATOR
+              4 POP_TOP
+              6 RESUME                   0
+              8 LOAD_FAST                0 (.0)
+        >>   10 FOR_ITER                17 (to 48)
+             14 STORE_FAST               1 (k)
+             16 LOAD_GLOBAL              1 (NULL + _ascii)
+             26 LOAD_FAST                1 (k)
+             28 CALL                     1
+             36 LOAD_DEREF               2 (low)
+             38 CONTAINS_OP              0
+             40 YIELD_VALUE              1
+             42 RESUME                   1
+             44 POP_TOP
+             46 JUMP_BACKWARD           19 (to 10)
+        >>   48 END_FOR
+             50 RETURN_CONST             0 (None)
+        >>   52 CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+             54 RERAISE                  1
+ExceptionTable:
+  6 to 50 -> 52 [0] lasti
+
+Disassembly of extract_total_vnd:
+ 62           0 RESUME                   0
+
+ 63           2 LOAD_GLOBAL              1 (NULL + _s)
+             12 LOAD_FAST                0 (answer)
+             14 CALL                     1
+             22 STORE_FAST               0 (answer)
+
+ 64          24 LOAD_FAST                0 (answer)
+             26 POP_JUMP_IF_TRUE         1 (to 30)
+
+ 65          28 RETURN_CONST             0 (None)
+
+ 66     >>   30 LOAD_GLOBAL              3 (NULL + re)
+             40 LOAD_ATTR                4 (sub)
+             60 LOAD_CONST               1 ('\\(lien he:.*?\\)')
+             62 LOAD_CONST               2 ('')
+             64 LOAD_FAST                0 (answer)
+             66 CALL                     3
+             74 STORE_FAST               0 (answer)
+
+ 67          76 BUILD_LIST               0
+             78 STORE_FAST               1 (cands)
+
+ 68          80 LOAD_GLOBAL              3 (NULL + re)
+             90 LOAD_ATTR                6 (findall)
+            110 LOAD_CONST               3 ('\\d[\\d., ]*\\d|\\d')
+            112 LOAD_FAST                0 (answer)
+            114 CALL                     2
+            122 GET_ITER
+        >>  124 FOR_ITER                83 (to 294)
+            128 STORE_FAST               2 (n)
+
+ 69         130 LOAD_GLOBAL              3 (NULL + re)
+            140 LOAD_ATTR                4 (sub)
+            160 LOAD_CONST               4 ('[., ]')
+            162 LOAD_CONST               2 ('')
+            164 LOAD_FAST                2 (n)
+            166 CALL                     3
+            174 STORE_FAST               3 (v)
+
+ 70         176 LOAD_FAST                3 (v)
+            178 LOAD_ATTR                9 (NULL|self + isdigit)
+            198 CALL                     0
+            206 POP_JUMP_IF_TRUE         1 (to 210)
+            208 JUMP_BACKWARD           43 (to 124)
+        >>  210 LOAD_GLOBAL             11 (NULL + int)
+            220 LOAD_FAST                3 (v)
+            222 CALL                     1
+            230 LOAD_CONST               5 (1000)
+            232 COMPARE_OP              92 (>=)
+            236 POP_JUMP_IF_TRUE         1 (to 240)
+            238 JUMP_BACKWARD           58 (to 124)
+
+ 71     >>  240 LOAD_FAST                1 (cands)
+            242 LOAD_ATTR               13 (NULL|self + append)
+            262 LOAD_GLOBAL             11 (NULL + int)
+            272 LOAD_FAST                3 (v)
+            274 CALL                     1
+            282 CALL                     1
+            290 POP_TOP
+            292 JUMP_BACKWARD           85 (to 124)
+
+ 68     >>  294 END_FOR
+
+ 72         296 LOAD_FAST                1 (cands)
+            298 POP_JUMP_IF_FALSE        5 (to 310)
+            300 LOAD_FAST                1 (cands)
+            302 LOAD_CONST               6 (-1)
+            304 BINARY_SUBSCR
+            308 RETURN_VALUE
+        >>  310 LOAD_CONST               0 (None)
+            312 RETURN_VALUE
+

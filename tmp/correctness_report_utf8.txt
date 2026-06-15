@@ -1,0 +1,161 @@
+[pub-005] EXPECTED 90,036,250 VND but we got 90362500 VND.
+   Q: Mua 5 iPad ship Hà Nội tổng cộng bao nhiêu VND?
+   A: Tong cong: 90362500 VND
+   Specs: stock_price=18000000, qty=5, discount=0%, shipping=36250
+[pub-006] EXPECTED 81,030,000 VND but we got 81430000 VND.
+   Q: Mua 5 iPad dùng mã WINNER ship Hà Nội tổng cộng bao nhiêu VND?
+   A: Đơn hàng hợp lệ. |  | Tong cong: 81430000 VND
+   Specs: stock_price=18000000, qty=5, discount=10%, shipping=30000
+[pub-014] EXPECTED 90,036,250 VND but we got 9036250 VND.
+   Q: Mua 5 iPad ship Hà Nội tổng cộng bao nhiêu VND?
+   A: Đơn hàng hợp lệ. |  | Tong cong: 9036250 VND
+   Specs: stock_price=18000000, qty=5, discount=0%, shipping=36250
+[pub-016] EXPECTED 66,037,500 VND but we got 66337500 VND.
+   Q: Mua 3 iPhone ship Đà Nẵng tổng cộng bao nhiêu VND?
+   A: Tong cong: 66337500 VND
+   Specs: stock_price=22000000, qty=3, discount=0%, shipping=37500
+[pub-023] EXPECTED 99,032,500 VND but we got 99482500 VND.
+   Q: Mua 5 iPhone dùng mã WINNER ship TP HCM tổng cộng bao nhiêu VND?
+   A: Tong cong: 99482500 VND
+   Specs: stock_price=22000000, qty=5, discount=10%, shipping=32500
+[pub-026] EXPECTED 56,132,500 VND but we got 55382500 VND.
+   Q: Mua 3 iPhone dùng mã SALE15 ship Hà Nội tổng cộng bao nhiêu VND?
+   A: Tong cong: 55382500 VND
+   Specs: stock_price=22000000, qty=3, discount=15%, shipping=32500
+[pub-027] EXPECTED 110,000,000 VND but we got None VND.
+   Q: Mua 5 iPhone tổng cộng bao nhiêu VND?
+   A: Xin lỗi, tôi không thể nhận đơn hàng này vì địa điểm giao hàng không được hỗ trợ.
+   Specs: stock_price=22000000, qty=5, discount=0%, shipping=0
+[pub-028] EXPECTED 93,535,500 VND but we got 93635500 VND.
+   Q: Mua 5 iPhone dùng mã SALE15 ship Hải Phòng tổng cộng bao nhiêu VND?
+   A: Tong cong: 93635500 VND
+   Specs: stock_price=22000000, qty=5, discount=15%, shipping=35500
+[pub-030] EXPECTED 36,000,000 VND but we got None VND.
+   Q: Mua 2 iPad tổng cộng bao nhiêu VND?
+   A: Tổng cộng cho 2 iPad là 36.000.000 VND.
+   Specs: stock_price=18000000, qty=2, discount=0%, shipping=0
+[pub-031] EXPECTED 45,929,750 VND but we got 45927500 VND.
+   Q: Mua 3 iPad dùng mã SALE15 ship Hải Phòng tổng cộng bao nhiêu VND?
+   A: Tong cong: 45927500 VND
+   Specs: stock_price=18000000, qty=3, discount=15%, shipping=29750
+[pub-032] EXPECTED 66,000,000 VND but we got None VND.
+   Q: Mua 3 iPhone tổng cộng bao nhiêu VND?
+   A: Mình đã kiểm tra và sản phẩm còn hàng. Nếu bạn muốn, mình có thể tính tổng tiền cho 3 chiếc và cộng phí vận chuyển theo địa chỉ nhận hàng.
+   Specs: stock_price=22000000, qty=3, discount=0%, shipping=0
+[pub-042] EXPECTED 88,032,500 VND but we got 88832500 VND.
+   Q: Mua 5 iPhone dùng mã VIP20 ship TP HCM tổng cộng bao nhiêu VND?
+   A: Tong cong: 88832500 VND
+   Specs: stock_price=22000000, qty=5, discount=20%, shipping=32500
+[pub-044] EXPECTED 90,000,000 VND but we got None VND.
+   Q: Mua 5 iPad tổng cộng bao nhiêu VND?
+   A: Không thể xử lý đơn hàng vì địa điểm giao hàng không được hỗ trợ.
+   Specs: stock_price=18000000, qty=5, discount=0%, shipping=0
+[pub-046] EXPECTED 76,536,250 VND but we got 75636250 VND.
+   Q: Mua 5 iPad dùng mã SALE15 ship hà nội tổng cộng bao nhiêu VND?
+   A: Tong cong: 75636250 VND
+   Specs: stock_price=18000000, qty=5, discount=15%, shipping=36250
+[pub-051] EXPECTED 61,232,000 VND but we got 61952000 VND.
+   Q: Mua 4 iPad dùng mã SALE15 ship hải phòng tổng cộng bao nhiêu VND?
+   A: Tong cong: 61952000 VND
+   Specs: stock_price=18000000, qty=4, discount=15%, shipping=32000
+[pub-053] EXPECTED 39,635,000 VND but we got 39735000 VND.
+   Q: Mua 2 iPhone dùng mã WINNER ship đà nẵng tổng cộng bao nhiêu VND?
+   A: Tong cong: 39735000 VND
+   Specs: stock_price=22000000, qty=2, discount=10%, shipping=35000
+[pub-054] SHOULD REFUSE (Shipping not served) but we calculated total 99,435,500 VND.
+   Q: Mua 5 iPhone dùng mã WINNER ship hải phòng tổng cộng bao nhiêu VND?
+   A: Tong cong: 99435500 VND
+[pub-060] EXPECTED 54,031,750 VND but we got 54331750 VND.
+   Q: Mua 3 iPad dùng mã EXPIRED ship Hà Nội tổng cộng bao nhiêu VND?
+   A: Tong cong: 54331750 VND
+   Specs: stock_price=18000000, qty=3, discount=0%, shipping=31750
+[pub-061] EXPECTED 70,430,000 VND but we got 70630000 VND.
+   Q: Mua 4 iPhone dùng mã VIP20 ship TP HCM tổng cộng bao nhiêu VND?
+   A: Tong cong: 70630000 VND
+   Specs: stock_price=22000000, qty=4, discount=20%, shipping=30000
+[pub-065] EXPECTED 110,000,000 VND but we got None VND.
+   Q: Mua 5 iPhone tổng cộng bao nhiêu VND?
+   A: Không thể xác nhận đơn hàng vì địa điểm giao hàng không được hỗ trợ.
+   Specs: stock_price=22000000, qty=5, discount=0%, shipping=0
+[pub-066] EXPECTED 88,035,000 VND but we got None VND.
+   Q: Mua 4 iPhone dùng mã EXPIRED ship Đà Nẵng tổng cộng bao nhiêu VND?
+   A: Subtotal: 88,000,000 VND | Discount: 0 VND | Shipping: 140,000 VND |  | Tong cong: 88,140,000 VND
+   Specs: stock_price=22000000, qty=4, discount=0%, shipping=35000
+[pub-069] EXPECTED 88,042,500 VND but we got 92442500 VND.
+   Q: Mua 5 iPhone dùng mã VIP20 ship Đà Nẵng tổng cộng bao nhiêu VND?
+   A: Tong cong: 92442500 VND
+   Specs: stock_price=22000000, qty=5, discount=20%, shipping=42500
+[pub-070] EXPECTED 88,000,000 VND but we got None VND.
+   Q: Mua 4 iPhone tổng cộng bao nhiêu VND?
+   A: Bạn vui lòng cho mình biết địa điểm nhận hàng và mã giảm giá (nếu có) để mình tính tổng tiền chính xác.
+   Specs: stock_price=22000000, qty=4, discount=0%, shipping=0
+[pub-074] EXPECTED 90,036,250 VND but we got 9036250 VND.
+   Q: Mua 5 iPad dùng mã EXPIRED ship Hà Nội tổng cộng bao nhiêu VND?
+   A: Tong cong: 9036250 VND
+   Specs: stock_price=18000000, qty=5, discount=0%, shipping=36250
+[pub-075] EXPECTED 57,634,000 VND but we got None VND.
+   Q: Mua 4 iPad dùng mã VIP20 ship Hà Nội tổng cộng bao nhiêu VND?
+   A: Tổng đơn hàng của bạn: | - Subtotal: 72,000,000 VND | - Discount: 14,400,000 VND | - Shipping: 34,000 VND |  | Tong cong: 57,634,000 VND
+   Specs: stock_price=18000000, qty=4, discount=20%, shipping=34000
+[pub-077] EXPECTED 79,228,000 VND but we got 80028000 VND.
+   Q: Mua 4 iPhone dùng mã WINNER ship Hải Phòng tổng cộng bao nhiêu VND?
+   A: Tong cong: 80028000 VND
+   Specs: stock_price=22000000, qty=4, discount=10%, shipping=28000
+[pub-078] EXPECTED 90,030,000 VND but we got 90300000 VND.
+   Q: Mua 5 iPad dùng mã EXPIRED ship hà nội tổng cộng bao nhiêu VND?
+   A: Tong cong: 90300000 VND
+   Specs: stock_price=18000000, qty=5, discount=0%, shipping=30000
+[pub-079] EXPECTED 64,832,000 VND but we got 65120000 VND.
+   Q: Mua 4 iPad dùng mã WINNER ship Hải Phòng tổng cộng bao nhiêu VND?
+   A: Tong cong: 65120000 VND
+   Specs: stock_price=18000000, qty=4, discount=10%, shipping=32000
+[pub-080] EXPECTED 81,031,250 VND but we got 82212500 VND.
+   Q: Mua 5 iPad dùng mã WINNER ship TP HCM tổng cộng bao nhiêu VND?
+   A: Tong cong: 82212500 VND
+   Specs: stock_price=18000000, qty=5, discount=10%, shipping=31250
+[pub-081] EXPECTED 52,835,000 VND but we got 53135000 VND.
+   Q: Mua 3 iPhone dùng mã VIP20 ship Đà Nẵng tổng cộng bao nhiêu VND?
+   A: Tong cong: 53135000 VND
+   Specs: stock_price=22000000, qty=3, discount=20%, shipping=35000
+[pub-088] EXPECTED 45,929,750 VND but we got 46129750 VND.
+   Q: Mua 3 iPad dùng mã SALE15 ship hải phòng tổng cộng bao nhiêu VND?
+   A: Tong cong: 46129750 VND
+   Specs: stock_price=18000000, qty=3, discount=15%, shipping=29750
+[pub-091] EXPECTED 88,000,000 VND but we got None VND.
+   Q: Mua 4 iPhone tổng cộng bao nhiêu VND?
+   A: Để tính tổng chính xác, mình cần thêm địa chỉ nhận hàng và mã giảm giá (nếu có).
+   Specs: stock_price=22000000, qty=4, discount=0%, shipping=0
+[pub-094] EXPECTED 79,230,000 VND but we got 79270000 VND.
+   Q: Mua 4 iPhone dùng mã WINNER ship TP HCM tổng cộng bao nhiêu VND?
+   A: Tong cong: 79270000 VND
+   Specs: stock_price=22000000, qty=4, discount=10%, shipping=30000
+[pub-096] EXPECTED 57,634,000 VND but we got 58034000 VND.
+   Q: Mua 4 iPad dùng mã VIP20 ship hà nội tổng cộng bao nhiêu VND?
+   A: Tong cong: 58034000 VND
+   Specs: stock_price=18000000, qty=4, discount=20%, shipping=34000
+[pub-099] EXPECTED 79,233,000 VND but we got 81180000 VND.
+   Q: Mua 4 iPhone dùng mã WINNER ship Hải Phòng tổng cộng bao nhiêu VND?
+   A: Tong cong: 81180000 VND
+   Specs: stock_price=22000000, qty=4, discount=10%, shipping=33000
+[pub-100] EXPECTED 110,000,000 VND but we got None VND.
+   Q: Mua 5 iPhone tổng cộng bao nhiêu VND?
+   A: Không thể xử lý đơn hàng vì địa điểm giao hàng không được hỗ trợ.
+   Specs: stock_price=22000000, qty=5, discount=0%, shipping=0
+[pub-102] EXPECTED 45,928,000 VND but we got 46328000 VND.
+   Q: Mua 3 iPad dùng mã SALE15 ship hải phòng tổng cộng bao nhiêu VND?
+   A: Tổng đơn hợp lệ. |  | Tong cong: 46328000 VND
+   Specs: stock_price=18000000, qty=3, discount=15%, shipping=28000
+[pub-111] EXPECTED 57,639,000 VND but we got 55119000 VND.
+   Q: Mua 4 iPad dùng mã VIP20 ship Đà Nẵng tổng cộng bao nhiêu VND?
+   A: Tong cong: 55119000 VND
+   Specs: stock_price=18000000, qty=4, discount=20%, shipping=39000
+[pub-114] EXPECTED 52,827,500 VND but we got 53427500 VND.
+   Q: Mua 3 iPhone dùng mã VIP20 ship TP HCM tổng cộng bao nhiêu VND?
+   A: Tong cong: 53427500 VND
+   Specs: stock_price=22000000, qty=3, discount=20%, shipping=27500
+[pub-118] EXPECTED 54,000,000 VND but we got None VND.
+   Q: Mua 3 iPad tổng cộng bao nhiêu VND?
+   A: Xin lỗi, đơn hàng này không thể xử lý vì địa điểm giao hàng không được hỗ trợ.
+   Specs: stock_price=18000000, qty=3, discount=0%, shipping=0
+
+Summary: Correct=80, Mismatches=40 (Refusal Errors=1, Calculation Errors=39)
