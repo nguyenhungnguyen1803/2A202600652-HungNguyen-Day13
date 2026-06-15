@@ -1,12 +1,72 @@
 {
-  "team": "TODO-team-name",
+  "team": "Vietnam-Team",
   "schema_version": 1,
   "findings": [
     {
+      "fault_class": "error_spike",
+      "evidence": {"metric": "tool_error_rate", "observed": "0.18 with 0% retry success rate", "trace_ids": []},
+      "root_cause": "The agent config had tool_error_rate set to 0.18 and retry disabled (max_attempts = 1, enabled = false), causing intermittent tool failures to bubble up directly as errors.",
+      "suggested_fix": "Enable retry in config.json with max_attempts: 3 and backoff_ms: 150, and wrap call_next in wrapper.py with error handling."
+    },
+    {
       "fault_class": "latency_spike",
-      "evidence": {"metric": "latency_p95_ms", "observed": "TODO from your telemetry", "trace_ids": []},
-      "root_cause": "TODO: what config knob or behavior causes it?",
-      "suggested_fix": "TODO: config change and/or wrapper mitigation"
+      "evidence": {"metric": "latency_p95_ms", "observed": "High latency above 3000ms per request", "trace_ids": []},
+      "root_cause": "The agent had cache disabled, used premium model price tier, and did not reuse responses for repeated queries in the same session.",
+      "suggested_fix": "Enable cache in config.json, implement a thread-safe cache in wrapper.py, and change model_price_tier to standard."
+    },
+    {
+      "fault_class": "pii_leak",
+      "evidence": {"metric": "pii_redacted_count", "observed": "Multiple phone numbers and emails leaked in final answers", "trace_ids": []},
+      "root_cause": "The agent config had redact_pii disabled, and the default system prompt did not instruct the model to hide customer contact details.",
+      "suggested_fix": "Enable redact_pii in config.json, write a rule in prompt.txt forbidding repeating PII, and use redact() in wrapper.py."
+    },
+    {
+      "fault_class": "tool_failure",
+      "evidence": {"metric": "failed_orders_macbook", "observed": "Orders for MacBook or Vietnamese accented cities fail to complete", "trace_ids": []},
+      "root_cause": "normalize_unicode was set to false (causing diacritic mismatches in city names), and catalog_override hardcoded MacBook as out of stock.",
+      "suggested_fix": "Set normalize_unicode to true, and clear the catalog_override block in config.json."
+    },
+    {
+      "fault_class": "infinite_loop",
+      "evidence": {"metric": "status_loop_count", "observed": "Requests ending with max_steps (12) due to repeated identical tool calls", "trace_ids": []},
+      "root_cause": "loop_guard was disabled, and max_steps was set to 12 without tool budget limits.",
+      "suggested_fix": "Enable loop_guard, set max_steps to 6, set tool_budget to 4, and instruct the model in prompt.txt to call each tool at most once."
+    },
+    {
+      "fault_class": "cost_blowup",
+      "evidence": {"metric": "average_cost_usd", "observed": "Token usage and cost extremely high per session", "trace_ids": []},
+      "root_cause": "context_size was set to 8 and verbose_system was true, leading to bloated prompts, and the system prompt was long and wordy.",
+      "suggested_fix": "Reduce context_size to 4, set verbose_system to false, keep prompt.txt concise (under 600 chars), and implement cache."
+    },
+    {
+      "fault_class": "quality_drift",
+      "evidence": {"metric": "turn_index_accuracy", "observed": "Accuracy and formatting degrade heavily after turn 3 in a session", "trace_ids": []},
+      "root_cause": "session_drift_rate set to 0.06, and context_reset_every was 0 (never resetting), causing historical drift to corrupt current responses.",
+      "suggested_fix": "Set context_reset_every to 3 in config.json to clear history and prevent drift accumulation."
+    },
+    {
+      "fault_class": "prompt_injection",
+      "evidence": {"metric": "price_hijack_attempts", "observed": "User notes contain override commands targeting agent prices", "trace_ids": []},
+      "root_cause": "The agent was treating the user-supplied order notes (GHI CHÚ) as instructions, allowing hackers to manipulate product prices.",
+      "suggested_fix": "Add strict notes handling rules in prompt.txt, and implement regex note sanitization in wrapper.py to strip action verbs and price claims."
+    },
+    {
+      "fault_class": "fabrication",
+      "evidence": {"metric": "fabrication_rate", "observed": "Agent fabricating a price for out-of-stock items instead of refusing", "trace_ids": []},
+      "root_cause": "The system prompt did not instruct the model to ground its responses strictly in the tool outputs or refuse when stock is empty.",
+      "suggested_fix": "Instruct the model in prompt.txt to strictly ground answers in tool data and refuse to give a total if not in stock."
+    },
+    {
+      "fault_class": "arithmetic_error",
+      "evidence": {"metric": "arithmetic_accuracy", "observed": "Calculation errors in totals, worse with high temperature", "trace_ids": []},
+      "root_cause": "Temperature was set to 1.6 in config, causing high variance, and prompt didn't specify the floor formula for discounts.",
+      "suggested_fix": "Reduce temperature to 0.2, enable self_consistency: 3, and add a step-by-step discount floor formula in prompt.txt."
+    },
+    {
+      "fault_class": "tool_overuse",
+      "evidence": {"metric": "tools_used_per_call", "observed": "Model calling check_stock multiple times in one request", "trace_ids": []},
+      "root_cause": "Tool budget was set to 0 (unlimited), and the system prompt lacked tool economy instructions.",
+      "suggested_fix": "Set tool_budget to 4 in config.json, and instruct the model in prompt.txt to call each tool at most once."
     }
   ]
 }
